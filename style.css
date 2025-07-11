@@ -1,0 +1,23 @@
+/* Ejemplo de uso en CSS */
+body {
+  background-color: #FFFFFF;
+}
+
+.header {
+  background-color: #006980;
+}
+
+.navbar{
+  color: #0094A7;
+   display: flex;              /* Los elementos hijos se alinean horizontalmente */
+}
+
+
+.titulo_actsis{
+  font-size: 48px;
+  font-weight: 700px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
