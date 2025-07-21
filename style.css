@@ -1,19 +1,79 @@
-/* Ejemplo de uso en CSS */
 body {
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0; /* Elimina espacios por defecto del navegador */
+  padding: 0;
 }
 
-.header {
+/* NAVIGATION BAR GENERAL */
+nav {
   background-color: #006980;
+  padding: 20px 5%;
+  border-radius: 5px;
 }
 
-.navbar{
-           /* Los elementos hijos se alinean horizontalmente */
+/* Contenedor principal de los ítems */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap; /* Evita que se desborde en pantallas medianas */
 }
 
-
-.titulo_actsis{
-
-  
+/* Lista de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
 }
 
+/* Ítems individuales de la lista (para agregar algo más adelante) */
+nav ul li {
+  /* animaciones o decoraciones individuales*/
+}
+
+/* Enlaces del menú */
+.nav-link {
+  color: #ffffff; /* Color texto de la lista*/
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 4px; /* Mejora visual UX en hover */
+}
+
+/* UX: Hover para buena experiencia */
+.nav-link:hover {
+  color: #00ffff;
+  background-color: rgba(255, 0, 0, 0.1); 
+  cursor: pointer;
+}
+
+/* Título con cabecera libre */
+.titulo_actsis {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  margin-top: 10px;
+}
+
+  /* Responsive: celulares y tablets */
+  @media (max-width: 768px) {
+    .navbar, nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 0; /* Elimina márgenes para evitar desbordes */
+      width: 100%; /* Asegura que ocupe todo el ancho */
+    }
+
+    .nav-link {
+      font-size: 14px;
+      padding: 8px;
+      width: 100%; /* Ocupa todo el ancho en móviles */
+    }
+  }
