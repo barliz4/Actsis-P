@@ -5,11 +5,16 @@ body {
   padding: 0;
 }
 
-/* NAVIGATION BAR GENERAL */
+/* ------------------- */
+/*    CONTENEDORES     */
+/* ------------------- */
+
+/* Contenedor general del nav */
 nav {
   background-color: #006980;
   padding: 20px 5%;
   border-radius: 5px;
+
 }
 
 /* Contenedor principal de los ítems */
@@ -18,23 +23,33 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  flex-wrap: wrap; /* Evita que se desborde en pantallas medianas */
+  flex-wrap: wrap;                                                  /* Evita que se desborde en pantallas medianas */
 }
 
-/* Lista de navegación */
+
+/* -------------------------- */
+/* 📋 ESTRUCTURA DE LISTA UL */
+/* -------------------------- */
+
+/* Lista principal de navegación */
 nav ul {
   list-style: none;
   display: flex;
   gap: 80px;
   padding: 0;
   margin: 0;
-  text-transform: uppercase;
+  text-transform: uppercase;                                     /* Texto en mayúsculas */
 }
 
 /* Ítems individuales de la lista (para agregar algo más adelante) */
 nav ul li {
   /* animaciones o decoraciones individuales*/
 }
+
+
+/* --------------------------- */
+/* 🔗 ENLACES DE NAVEGACIÓN   */
+/* --------------------------- */
 
 /* Enlaces del menú */
 .nav-link {
@@ -43,7 +58,7 @@ nav ul li {
   font-weight: bold;
   padding: 10px;
   transition: color 0.3s, background-color 0.3s;
-  border-radius: 4px; /* Mejora visual UX en hover */
+  border-radius: 4px;                                           /* Mejora visual UX en hover */
 }
 
 /* UX: Hover para buena experiencia */
@@ -53,27 +68,53 @@ nav ul li {
   cursor: pointer;
 }
 
-/* Título con cabecera libre */
+/* -------------------------- */
+/* 🧩 CABECERA O TÍTULO      */
+/* -------------------------- */
+
 .titulo_actsis {
   text-align: center;
-  font-size: 24px;
-  color: white;
+  font-size: 35px;
+  color: #006980; /* Color del título */
   margin-top: 10px;
 }
 
-  /* Responsive: celulares y tablets */
+.subtitulos_generales {
+  text-align: left;
+  font-size: 30px;
+  color: #006980; /* Color de los subtítulos */
+  margin-top: 20px;
+  margin: 20px; 
+}
+
+.parrafos {
+  padding: 10px;
+  margin-top: 20px; /* Espacio entre párrafos */
+  font-size: 16px; /* Tamaño de fuente para párrafos */
+  line-height: 1.5; /* Mejora la legibilidad */
+  padding: 18px; 
+
+}
+
+ /* -------------------------- */
+/* 📱 RESPONSIVE DESIGN      */
+/* -------------------------- */
+
   @media (max-width: 768px) {
     .navbar, nav ul {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      margin: 0; /* Elimina márgenes para evitar desbordes */
-      width: 100%; /* Asegura que ocupe todo el ancho */
+      margin: 0;                                                        /* Elimina márgenes para evitar desbordes */
+      width: 100%;                                                      /* Asegura que ocupe todo el ancho */
     }
+
+
+      /* Enlaces se expanden a todo el ancho */
 
     .nav-link {
       font-size: 14px;
       padding: 8px;
-      width: 100%; /* Ocupa todo el ancho en móviles */
+      width: 100%;                                                      /* Ocupa todo el ancho en móviles */
     }
   }
