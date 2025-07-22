@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box; /* Asegura que el padding y border no afecten al ancho total */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -80,7 +86,7 @@ nav ul li {
 }
 
 .subtitulos_generales {
-  text-align: left;
+  text-align: center;
   font-size: 30px;
   color: #006980; /* Color de los subtítulos */
   margin-top: 20px;
@@ -96,8 +102,72 @@ nav ul li {
 
 }
 
+.proyectos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Permite que los proyectos se ajusten en pantallas más pequeñas */
+}
+
+
+.cartas-contenedores {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.carta {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.carta-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.boton-proyecto {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  /* -------------------------- */
-/* 📱 RESPONSIVE DESIGN      */
+/*      RESPONSIVE DESIGN      */
 /* -------------------------- */
 
   @media (max-width: 768px) {
@@ -107,6 +177,7 @@ nav ul li {
       gap: 20px;
       margin: 0;                                                        /* Elimina márgenes para evitar desbordes */
       width: 100%;                                                      /* Asegura que ocupe todo el ancho */
+      
     }
 
 
@@ -118,3 +189,5 @@ nav ul li {
       width: 100%;                                                      /* Ocupa todo el ancho en móviles */
     }
   }
+
+  
