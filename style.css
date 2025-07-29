@@ -4,6 +4,8 @@
   padding: 0;
 }
 
+
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -79,28 +81,89 @@ nav ul li {
 /* -------------------------- */
 
 .titulo_actsis {
+  font-family: "Barlow", Helvetica, Arial, sans-serif; 
+  font-weight: 900;
   text-align: center;
-  font-size: 35px;
+  font-size: 45px;
   color: #006980; /* Color del título */
   margin-top: 10px;
 }
 
 .subtitulos_generales {
+  font-family: "Barlow", Helvetica, Arial, sans-serif; 
+  font-weight: 900;
   text-align: center;
   font-size: 30px;
   color: #006980; /* Color de los subtítulos */
   margin-top: 20px;
-  margin: 20px; 
+  margin: 20px;
 }
 
+.parrafos_inicio {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: right; /* Centra el texto verticalmente */
+  justify-content: right ; /* Centra el texto horizontalmente */
+  padding: 20px; /* Espacio alrededor del texto */
+  margin: 20px; /* Espacio entre párrafos */
+  text-align:justify; /* Alinea el texto a ambos lados */
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  background-color: rgba(198, 233, 197, 0.741); /* Fondo amarillo */
+
+}
+
+
+.contenido_quienes {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Para que sea responsivo */
+  
+}
+
+.logo_inicio img {
+  width: 200px; /* Ajusta el tamaño de la imagen del logo */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 20px; /* Espacio alrededor del logo */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
+  transition: transform 0.3s; /* Transición suave al hacer hover */
+  background-color: black; /* Fondo */
+  
+}
+
+.logo_inicio {
+  display: flex;
+  justify-content: left; /* Alinea el logo a la izquierda */
+  align-items: center;
+  margin-top: 20px; /* Espacio superior para el logo */
+  margin-bottom: 20px; /* Espacio inferior para el logo */
+  background-color: rgba(42, 42, 15, 0.741);
+
+}
+
+
+
+
+
+
+
+
 .parrafos {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  align-items: flex-start; /* Alinea los elementos al inicio */
   padding: 10px;
   margin-top: 20px; /* Espacio entre párrafos */
   font-size: 16px; /* Tamaño de fuente para párrafos */
   line-height: 1.5; /* Mejora la legibilidad */
   padding: 18px; 
-
+  background-color: rgba(121, 203, 118, 0.741); /* Fondo amarillo */
 }
+
 
 .proyectos {
   display: flex;
