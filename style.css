@@ -1,5 +1,5 @@
 *{
-  box-sizing: border-box; /* Asegura que el padding y border no afecten al ancho total */
+  box-sizing: border-box; 
   margin: 0;
   padding: 0;
 }
@@ -9,12 +9,12 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  margin: 0; /* Elimina espacios por defecto del navegador */
+  margin: 0; 
   padding: 0;
 }
 
 /* ------------------- */
-/*    CONTENEDORES     */
+/*    CONTENEDORES NAV    */
 /* ------------------- */
 
 /* Contenedor general del nav */
@@ -31,7 +31,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 60px;
-  flex-wrap: wrap;                                                  /* Evita que se desborde en pantallas medianas */
+  flex-wrap: wrap; 
 }
 
 
@@ -46,7 +46,7 @@ nav ul {
   gap: 80px;
   padding: 0;
   margin: 0;
-  text-transform: uppercase;                                     /* Texto en mayúsculas */
+  text-transform: uppercase;  /* Texto en mayúsculas */
 }
 
 /* Ítems individuales de la lista (para agregar algo más adelante) */
@@ -66,7 +66,7 @@ nav ul li {
   font-weight: bold;
   padding: 10px;
   transition: color 0.3s, background-color 0.3s;
-  border-radius: 4px;                                           /* Mejora visual UX en hover */
+  border-radius: 4px;       
 }
 
 /* UX: Hover para buena experiencia */
@@ -77,7 +77,7 @@ nav ul li {
 }
 
 /* -------------------------- */
-/*    CABECERA O TÍTULO      */
+/*    SECCION INICIO         */
 /* -------------------------- */
 
 .titulo_actsis {
@@ -99,69 +99,75 @@ nav ul li {
   margin: 20px;
 }
 
-.parrafos_inicio {
-  display: flex; /* Utiliza flexbox para alinear los elementos */
-  align-items: right; /* Centra el texto verticalmente */
-  justify-content: right ; /* Centra el texto horizontalmente */
-  padding: 20px; /* Espacio alrededor del texto */
-  margin: 20px; /* Espacio entre párrafos */
-  text-align:justify; /* Alinea el texto a ambos lados */
 
+
+.texto_inicio {
+  max-width: 600px;
+  text-align: justify;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   color: #333;
   line-height: 1.6;
-  background-color: rgba(198, 233, 197, 0.741); /* Fondo amarillo */
-
 }
 
+.boton_inicio {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #1eb6c9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton_inicio:hover {
+  background-color: #1296a8;
+}
 
 .contenido_quienes {
-  display: flex; /* Utiliza flexbox para alinear los elementos */
-  flex-direction: column; /* Alinea los elementos en columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  gap: 30px;
-  margin-top: 20px;
-  flex-wrap: wrap; /* Para que sea responsivo */
-  
+  display: flex;
+  align-items: center;        /* Centra verticalmente */
+  justify-content: center;    /* Centra todo en el contenedor */
+  gap: 40px;                  /* Espacio entre logo y texto */
+  flex-wrap: wrap;            
+  padding: 20px;
 }
 
-.logo_inicio img {
-  width: 200px; /* Ajusta el tamaño de la imagen del logo */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin: 20px; /* Espacio alrededor del logo */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para darle profundidad */
-  transition: transform 0.3s; /* Transición suave al hacer hover */
-  background-color: black; /* Fondo */
-  
-}
 
 .logo_inicio {
   display: flex;
-  justify-content: left; /* Alinea el logo a la izquierda */
+  justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Espacio superior para el logo */
-  margin-bottom: 20px; /* Espacio inferior para el logo */
-  background-color: rgba(42, 42, 15, 0.741);
+  margin: 0;
+  background-color: transparent; /* Se quita el fondo */
+}
 
+.logo_inicio img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  width: auto; 
+  background-color: rgba(255, 255, 255, 0.277);
+  transition: transform 0.3s;
 }
 
 
 
-
-
-
-
+/* -------------------------- */
+/*--------- CARDS -------------*/
+/* -------------------------- */
 
 .parrafos {
-  display: flex; /* Utiliza flexbox para alinear los elementos */
+  display: grid; /* Utiliza flexbox para alinear los elementos */
   align-items: flex-start; /* Alinea los elementos al inicio */
   padding: 10px;
   margin-top: 20px; /* Espacio entre párrafos */
   font-size: 16px; /* Tamaño de fuente para párrafos */
   line-height: 1.5; /* Mejora la legibilidad */
   padding: 18px; 
-  background-color: rgba(121, 203, 118, 0.741); /* Fondo amarillo */
+  background-color: rgba(255, 255, 255, 0.741); 
 }
 
 
@@ -224,26 +230,6 @@ nav ul li {
 .carta.animada {
   animation: aparecerDesdeAbajo 0.8s ease-out forwards;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
