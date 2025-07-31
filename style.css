@@ -4,8 +4,6 @@
   padding: 0;
 }
 
-
-
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
@@ -49,9 +47,9 @@ nav ul {
   text-transform: uppercase;  /* Texto en mayúsculas */
 }
 
-/* Ítems individuales de la lista (para agregar algo más adelante) */
+
 nav ul li {
-  /* animaciones o decoraciones individuales*/
+  /* animaciones o decoraciones individuales  (/* Ítems individuales de la lista (para agregar algo más adelante) */
 }
 
 
@@ -99,8 +97,6 @@ nav ul li {
   margin: 20px;
 }
 
-
-
 .texto_inicio {
   max-width: 600px;
   text-align: justify;
@@ -142,22 +138,35 @@ nav ul li {
   align-items: center;
   margin: 0;
   background-color: transparent; /* Se quita el fondo */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  max-width: 400px; /* Limita el ancho máximo del logo */
+  height: auto; /* Permite que el logo mantenga su proporción */
+  transition: transform 0.3s; /* Transición suave al hacer hover */
 }
-
+      
 .logo_inicio img {
   width: 250px;
-  max-width: 100%;
-  height: auto;
-  width: auto; 
-  background-color: rgba(255, 255, 255, 0.277);
-  transition: transform 0.3s;
+  max-width: 250%;   
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.3s; /* Transición suave al hacer hover */
 }
 
-
-
 /* -------------------------- */
-/*--------- CARDS -------------*/
+/*--------- Proyectos -------------*/
 /* -------------------------- */
+
+.texto_proyectos {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  background-color: royalblue;
+  margin: 20px auto; /* Centra el texto y añade margen */
+  max-width: 800px; /* Limita el ancho del texto */
+  line-height: 1.6; /* Mejora la legibilidad */
+  padding: 10px; /* Añade un poco de espacio alrededor del texto */
+  font-size: large; 
+  font-family: 'Montserrat', sans-serif; /* Fuente para el texto de proyectos */
+}
 
 .parrafos {
   display: grid; /* Utiliza flexbox para alinear los elementos */
@@ -170,14 +179,12 @@ nav ul li {
   background-color: rgba(255, 255, 255, 0.741); 
 }
 
-
 .proyectos {
   display: flex;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap; /* Permite que los proyectos se ajusten en pantallas más pequeñas */
 }
-
 
 .cartas-contenedores {
     display: flex;
