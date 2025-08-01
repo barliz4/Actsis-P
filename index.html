@@ -6,7 +6,10 @@
     <title>ACTSIS LTDA - Desarrollo Tecnológico</title>
     <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -41,7 +44,10 @@
           <div class="contenido_quienes">
             <!-- Logo -->
             <div class="logo_inicio">
-              <img src="imagenes/logoactsis2-removebg-preview.png" alt="Logo de ACTSIS LTDA"/>
+              <img
+                src="imagenes/logoactsis2-removebg-preview.png"
+                alt="Logo de ACTSIS LTDA"
+              />
             </div>
 
             <!-- Texto descriptivo -->
@@ -114,19 +120,45 @@
 
       <!--Sección Servicios-->
 
-      <section id="servicios">
+      <section id="servicios" class="seccion_animada">
         <div class="contenedor_servicios">
           <h2 class="subtitulos_generales">Nuestros Servicios</h2>
+          <p class="texto_servicios">
+            En ACTSIS LTDA ofrecemos una amplia gama de servicios diseñados para
+            satisfacer las necesidades tecnológicas y administrativas de
+            nuestros clientes.
+          </p>
+
+          <div class="carrusel_servicios">
+            <div class="slides_container">
+              <div class="slide">🚀 Modernizamos tus sistemas críticos</div>
+              <div class="slide">🛠️ Creamos software a tu medida</div>
+              <div class="slide">💡 Brindamos soluciones inteligentes</div>
+              <div class="slide">📞 Estamos siempre listos para ayudarte</div>
+            </div>
+          <button class="btn-carrusel left">⟨--</button>
+          <button class="btn-carrusel right">--⟩</button>
+          </div>
         </div>
       </section>
+
+      
 
       <br />
 
       <!--Sección Filiales -->
 
       <section id="filiales">
-        <div class="contenedor_filiales">
-          <h2 class="subtitulos_generales">Filiales</h2>
+        <h2 class="subtitulos_generales">Filiales</h2>
+        <div class="carrusel_filiales">
+          <div class="filial">ESSA</div>
+          <div class="filial">ESPY</div>
+          <div class="filial">CELSIA INTERNET</div>
+          <div class="filial">EDEQ</div>
+          <div class="filial">SERENA</div>
+          <div class="filial">SOPESA</div>
+          <div class="filial">EPM</div>
+          <div class="filial">CENTRALES</div>
         </div>
       </section>
 
@@ -135,12 +167,36 @@
       <!--Sección Contacto-->
 
       <section id="contacto">
-        <div class="contenedor_contacto">
-          <h2 class="subtitulos_generales">Contacto</h2>
-        </div>
+        <h2 class="subtitulos_generales">Contacto</h2>
+
+         <form class="formulario_contacto" action="#" method="post">
+
+          <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required />
+          </div>
+
+          <div class="campo">
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto"/>
+          </div>
+
+          <di class="campo">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="boton_contacto">Enviar mensaje</button>
+        </form>
+
       </section>
     </header>
-
+    
     <script src="animations.js"></script>
   </body>
 </html>
