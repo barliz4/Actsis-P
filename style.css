@@ -220,6 +220,16 @@ nav ul li {
 }
 
 
+/* -------------------------- */
+/*--------- SERVICIOS -------------*/
+/* -------------------------- */
+  
+
+
+
+
+
+
 
 /* Animación para aparecer desde abajo */
 @keyframes aparecerDesdeAbajo {
@@ -237,6 +247,8 @@ nav ul li {
 .carta.animada {
   animation: aparecerDesdeAbajo 0.8s ease-out forwards;
 }
+
+
 
 
 
