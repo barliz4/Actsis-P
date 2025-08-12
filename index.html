@@ -150,15 +150,21 @@
 
       <section id="filiales">
         <h2 class="subtitulos_generales">Filiales</h2>
+        <p class="descripcion_filiales">
+          ACTSIS LTDA cuenta con varias filiales que operan en diferentes
+          regiones de Colombia, brindando servicios especializados y adaptados
+          a las necesidades locales. Cada filial comparte nuestro compromiso con
+          la calidad y la innovación, asegurando que nuestros clientes reciban
+          el mejor servicio posible.
+        </p>
+
         <div class="carrusel_filiales">
-          <div class="filial">ESSA</div>
-          <div class="filial">ESPY</div>
-          <div class="filial">CELSIA INTERNET</div>
-          <div class="filial">EDEQ</div>
-          <div class="filial">SERENA</div>
-          <div class="filial">SOPESA</div>
-          <div class="filial">EPM</div>
-          <div class="filial">CENTRALES</div>
+          <div class="filial"><img src="imagenes/ESSA-removebg-preview.png" alt="ESSA" /></div>
+          <div class="filial"><img src="imagenes/celsia-removebg-preview.png" alt="Celsia" /></div>
+          <div class="filial"><img src="imagenes/EDEQ-removebg-preview.png" alt="EDEQ" /></div>
+          <div class="filial"><img src="imagenes/Sopesa_logo-removebg-preview.png" alt="SOPESA" /></div>
+          <div class="filial"><img src="imagenes/EPM_logo-removebg-preview.png" alt="EPM" /></div>
+          <div class="filial"><img src="imagenes/CENS_LOGO-removebg-preview.png" alt="Centrales" /></div>
         </div>
       </section>
 
@@ -167,7 +173,7 @@
       <!--Sección Contacto-->
 
       <section id="contacto">
-        <h2 class="subtitulos_generales">Contacto</h2>
+        <h2 class="subtitulos_generales">CONTACTO</h2>
 
          <form class="formulario_contacto" action="#" method="post">
 
@@ -182,6 +188,11 @@
           </div>
 
           <div class="campo">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{7,15}" placeholder="Ej: 3001234567" /> <!-- es opcional, pero sirve para validar que solo se ingresen números de 7 a 15 dígitos. -->
+          </div>
+
+          <div class="campo">
             <label for="asunto">Asunto:</label>
             <input type="text" id="asunto" name="asunto"/>
           </div>
@@ -190,11 +201,12 @@
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
           </div>
-
+          <br>
           <button type="submit" class="boton_contacto">Enviar mensaje</button>
         </form>
 
       </section>
+      <br>
     </header>
     
     <script src="animations.js"></script>
