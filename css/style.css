@@ -8,7 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   margin: 0; 
-  padding: 0;
+  padding-top: 80px; /* Ajusta según la altura real del nav */
 }
 
 /* ------------------- */
@@ -20,7 +20,11 @@ nav {
   background-color: #006980;
   padding: 20px 5%;
   border-radius: 5px;
-
+  position: fixed;   /* 🔹 Lo fija en la pantalla */
+  top: 0;            /* Lo pega arriba */
+  left: 0;           /* Lo pega a la izquierda */
+  width: 100%;       /* Que ocupe todo el ancho */
+  z-index: 1000;     /* Que quede por encima de todo */
 }
 
 /* Contenedor principal de los ítems */
@@ -223,8 +227,94 @@ nav ul li {
 /* -------------------------- */
 /*--------- SERVICIOS -------------*/
 /* -------------------------- */
+
   
+#servicios {
+  background-color: #afafaf;
+  padding: 50px 0;
+}
+
+.contenedor_servicios {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; /* Fuente para el texto de servicios */
+  color: #000000d8;
+}
+
+.carrusel_servicios {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.slides_container {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 250px;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+  transition: transform 0.3s;
+  border-top: 5px solid #006980;
+}
+
+.slide:hover {
+  transform: translateY(-5px);
+}
+
+.slide h3 {
+  color: #006980;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.slide p {
+  font-size: 0.9rem;
+  color: #000000;
   
+}
+
+.carrusel_servicios { 
+  position: relative; /* para que la posición absoluta funcione */
+}
+
+.btn-carrusel.left {
+  position: absolute;
+  left: -80px; /* desplaza hacia afuera */
+}
+
+.btn-carrusel.right {
+  position: absolute;
+  right: -80px; /* desplaza hacia afuera */
+}
+
+.btn-carrusel {
+  background-color: #006980;
+  color: white;
+  border : none;
+  font-size: 2rem;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  
+}
+
+.btn-carrusel:hover {
+  background-color: #00d5ff;
+}
+
+
 
 
 /* -------------------------- */
