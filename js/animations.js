@@ -1,3 +1,4 @@
+// ------------------------------------------------------ CARRUSEL, SERVICIOS --------------------------------------- -- //
 const slidesContainer = document.querySelector(".slides_container");
 const btnLeft = document.querySelector(".btn-carrusel.left");
 const btnRight = document.querySelector(".btn-carrusel.right");
@@ -10,6 +11,7 @@ btnLeft.addEventListener("click", () => {
   slidesContainer.scrollBy({ left: -300, behavior: "smooth" });
 });
 
+// ------------------------------------------------------ ENVIO FORMULARIO --------------------------------------- -- //
 document.querySelector(".formulario_contacto").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -34,3 +36,30 @@ document.querySelector(".formulario_contacto").addEventListener("submit", functi
 });
 
 
+// ------------------------------------------------------ NAV BAR, HACER SCROL --------------------------------------- -- //
+
+// Selecciona todos los enlaces <a> cuyo atributo href comience con "#" 
+// (es decir, los que apuntan a una sección dentro de la misma página)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  
+  // A cada enlace encontrado, le agregamos un "escuchador" de eventos (event listener)
+  // que se ejecuta cuando el usuario hace clic en él.
+  anchor.addEventListener('click', function(e) {
+    
+    // Previene el comportamiento por defecto del navegador,
+    // que sería saltar directamente al elemento sin animación.
+    e.preventDefault();
+
+    // Obtiene el elemento de destino en el DOM a partir del valor del href.
+    // Ejemplo: si el enlace es <a href="#contacto">, busca el elemento con id="contacto".
+    const destino = document.querySelector(this.getAttribute('href'));
+    
+    // Realiza el desplazamiento suave hacia el elemento destino.
+    // - behavior: 'smooth' → activa el scroll animado
+    // - block: 'start' → alinea el inicio (top) de la sección con la parte superior de la ventana
+    destino.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
