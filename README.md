@@ -4,8 +4,11 @@ Este proyecto corresponde al desarrollo de la página web oficial de **ACTSIS LT
 <div align="center">
 🌐 [Ver Demo en Vivo](https://barliz4.github.io/Actsis-P/)  
 
+--- 
+
 ![Estado](https://img.shields.io/badge/Estado-En%20Pausa-red)
-<div align="center">
+
+</div>
 
 ## 🌐 Objetivo del Proyecto
 Crear una plataforma web informativa que refleje la identidad corporativa de ACTSIS, brindando detalles sobre sus servicios, valores, historia, y medios de contacto. El sitio está optimizado para dispositivos móviles y de escritorio, asegurando una experiencia de usuario fluida.
