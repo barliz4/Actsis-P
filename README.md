@@ -2,7 +2,8 @@
 Este proyecto corresponde al desarrollo de la página web oficial de **ACTSIS LTDA**, una empresa especializada en soluciones tecnológicas y servicios de consultoría informática. La página busca transmitir profesionalismo, claridad y accesibilidad para sus clientes actuales y potenciales.
 
 🌐 [Ver Demo en Vivo](https://barliz4.github.io/Actsis-P/)  
-![Estado](https://img.shields.io/badge/Estado-En%20Desarrollo-yellow)  
+
+![Estado](https://img.shields.io/badge/Estado-En%20Pausa-red)
 
 ## 🌐 Objetivo del Proyecto
 Crear una plataforma web informativa que refleje la identidad corporativa de ACTSIS, brindando detalles sobre sus servicios, valores, historia, y medios de contacto. El sitio está optimizado para dispositivos móviles y de escritorio, asegurando una experiencia de usuario fluida.
