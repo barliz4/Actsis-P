@@ -1,10 +1,27 @@
+:root {
+  --color-principal: #006980;
+  --color-blanco: #ffffff;
+  --color-hover: #00d5ff;
+  --color-texto: #000000d8;
+  --fondo-seccion: #afafaf;
+  --borde-radio: 10px;
+  --fuente-general: 'Montserrat', sans-serif;
+}
+
 *{
   box-sizing: border-box; 
   margin: 0;
   padding: 0;
 }
 
+/*
+html {
+  scroll-behavior: smooth; 
+}
+*/
+
 body {
+ /*background-color: var(--color-blanco); */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   margin: 0; 
@@ -17,10 +34,10 @@ body {
 
 /* Contenedor general del nav */
 nav {
-  background-color: #006980;
+  background-color: var(--color-principal);
   padding: 20px 5%;
   border-radius: 5px;
-  position: fixed;   /* 🔹 Lo fija en la pantalla */
+  position: fixed;   /*  Lo fija en la pantalla */
   top: 0;            /* Lo pega arriba */
   left: 0;           /* Lo pega a la izquierda */
   width: 100%;       /* Que ocupe todo el ancho */
@@ -63,7 +80,7 @@ nav ul li {
 
 /* Enlaces del menú */
 .nav-link {
-  color: #ffffff; /* Color texto de la lista*/
+  color: var(--color-blanco); /* Color texto de la lista*/
   text-decoration: none;
   font-weight: bold;
   padding: 10px;
@@ -71,10 +88,11 @@ nav ul li {
   border-radius: 4px;       
 }
 
+
 /* UX: Hover para buena experiencia */
 .nav-link:hover {
-  color: #00ffff;
-  background-color: rgba(255, 0, 0, 0.1); 
+  color: var(--color-hover);
+  background-color: rgba(0, 0, 0, 0.1); 
   cursor: pointer;
 }
 
@@ -87,7 +105,7 @@ nav ul li {
   font-weight: 900;
   text-align: center;
   font-size: 45px;
-  color: #006980; /* Color del título */
+  color: var(--color-principal); /* Color del título */
   margin-top: 10px;
 }
 
@@ -96,7 +114,7 @@ nav ul li {
   font-weight: 900;
   text-align: center;
   font-size: 30px;
-  color: #006980; /* Color de los subtítulos */
+  color: #800073; /* Color de los subtítulos */
   margin-top: 20px;
   margin: 20px;
 }
@@ -106,15 +124,15 @@ nav ul li {
   text-align: justify;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: #333;
+  color: var(--color-texto);
   line-height: 1.6;
 }
 
 .boton_inicio {
   margin-top: 20px;
   padding: 12px 24px;
-  background-color: #1eb6c9;
-  color: white;
+  background-color: var(--color-hover);
+  color: var(--color-blanco);
   border: none;
   border-radius: 6px;
   font-size: 16px;
@@ -123,7 +141,7 @@ nav ul li {
 }
 
 .boton_inicio:hover {
-  background-color: #1296a8;
+  background-color: var(--color-principal);
 }
 
 .contenido_quienes {
@@ -151,7 +169,7 @@ nav ul li {
 .logo_inicio img {
   width: 250px;
   max-width: 250%;   
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-blanco);
   transition: transform 0.3s; /* Transición suave al hacer hover */
 }
 
@@ -162,8 +180,7 @@ nav ul li {
 .texto_proyectos {
   text-align: center;
   font-size: 16px;
-  color: #333;
-  background-color: rgb(255, 255, 255);
+  color: var(--color-principal);
   margin: 20px auto; /* Centra el texto y añade margen */
   max-width: 800px; /* Limita el ancho del texto */
   line-height: 1.6; /* Mejora la legibilidad */
@@ -180,7 +197,6 @@ nav ul li {
   font-size: 16px; /* Tamaño de fuente para párrafos */
   line-height: 1.5; /* Mejora la legibilidad */
   padding: 18px; 
-  background-color: rgba(255, 255, 255, 0.741); 
 }
 
 .proyectos {
@@ -199,12 +215,12 @@ nav ul li {
 
 .carta {
     width: 250px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-texto);
     border-radius: 10px;
     overflow: hidden;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0px 20px var(--color-principal);
 }
 
 .carta-imagen img {
@@ -216,11 +232,17 @@ nav ul li {
 .boton-proyecto {
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.boton-proyecto:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.05);
+    transition: transform 0.3s;
 }
 
 
@@ -228,9 +250,16 @@ nav ul li {
 /*--------- SERVICIOS -------------*/
 /* -------------------------- */
 
+
+
+.slide {
+  flex: 0 0 300px; /* Ancho fijo */
+  scroll-snap-align: start; /* Alinea al inicio de cada slide */
+}
+
   
 #servicios {
-  background-color: #afafaf;
+  background-color: #afafafc1;  /*Color temporal*/
   padding: 50px 0;
 }
 
@@ -240,7 +269,7 @@ nav ul li {
   margin: auto;
   text-align: center;
   font-family: 'Montserrat', sans-serif; /* Fuente para el texto de servicios */
-  color: #000000d8;
+  color: var(--color-texto);
 }
 
 .carrusel_servicios {
@@ -257,15 +286,15 @@ nav ul li {
 }
 
 .slide {
-  background-color: #fff;
+  background-color: var(--color-blanco);
   border-radius: 10px;
   padding: 20px;
   min-width: 250px;
   flex-shrink: 0;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+  box-shadow: 0 0px 8px var(--color-principal);
   transition: transform 0.3s;
-  border-top: 5px solid #006980;
+  border-top: 12px solid var(--color-principal);
 }
 
 .slide:hover {
@@ -273,14 +302,14 @@ nav ul li {
 }
 
 .slide h3 {
-  color: #006980;
+  color:var(--color-principal);
   margin: 20px 0;
   font-size: 1.2rem;
 }
 
 .slide p {
   font-size: 0.9rem;
-  color: #000000;
+  color: var(--color-texto);
   
 }
 
@@ -299,23 +328,26 @@ nav ul li {
 }
 
 .btn-carrusel {
-  background-color: #006980;
-  color: white;
-  border : none;
-  font-size: 2rem;
-  padding: 20px;
-  cursor: pointer;
+  background: var(--color-principal);
+  border: none;
   border-radius: 50%;
-  z-index: 10;
-  
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  color: var(--color-blanco);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0px 1px var(--color-texto);
+  transition: 0.3s;
 }
 
 .btn-carrusel:hover {
-  background-color: #00d5ff;
+  background: var(--color-hover);
+  transform: scale(1.3);  
 }
-
-
-
 
 /* -------------------------- */
 /*--------- FILIALES -------------*/
@@ -325,7 +357,7 @@ nav ul li {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 30px;
-  color: #000000;
+  color: var(--color-texto);
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -369,18 +401,18 @@ nav ul li {
   
 #contacto {
   padding: 40px;
-  background: linear-gradient(135deg, #0496b7, #004d5a);
+  background: linear-gradient(0deg, var(--color-texto) 30%, var(--color-principal) 100%);
   border-radius: 12px;
   max-width: 600px;
   margin: auto;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px var(--color-texto);
 }
 
 .subtitulos_generales { /*subtitulo contacto*/
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 25px;
-  color: #ffffff;
+  color: var(--color-blanco);
   letter-spacing: 1px;
 }
 
@@ -400,7 +432,7 @@ nav ul li {
 .campo label {
   font-weight: bold;
   margin-bottom: 6px;
-  color: #ffffff;
+  color: var(--color-blanco);
 }
 
 .campo input,
@@ -410,23 +442,23 @@ nav ul li {
   border-radius: 8px;
   font-size: 1rem;
   outline: none;
-  background-color: #ffffff;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--color-blanco);
+  box-shadow: inset 0 2px 4px var(--color-texto);
   transition: all 0.3s ease;
 }
 
 /* Efecto al enfocar el campo */
 .campo input:focus,
 .campo textarea:focus {
-  box-shadow: 0 0 8px rgba(0, 150, 255, 0.7);
+  box-shadow: 0 0 8px var(--color-texto);
   transform: scale(1.02);
   
 }
 
 /* Botón de enviar */
 .boton_contacto {
-  background-color: #0d00ff;
-  color: #ffffff;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
   font-size: 1.1rem;
   padding: 12px;
   border: none;
@@ -436,8 +468,12 @@ nav ul li {
 }
 
 .boton_contacto:hover {
-  background: linear-gradient(135deg, #2175ec, #0056b3);
+  background: linear-gradient(0deg, var(--color-principal), var(--color-hover));
   transform: scale(1.05);
+  box-shadow: 0 4px 15px var(--color-texto);
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  
 }
 
 
