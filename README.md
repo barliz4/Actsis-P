@@ -13,6 +13,7 @@ Crear una plataforma web informativa que refleje la identidad corporativa de ACT
 - CSS3 - para el diseño visual y la adaptación responsive.
 - Visual Studio Code - como entorno de desarrollo.
 - Git y GitHub - para control de versiones y despliegue.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
 
