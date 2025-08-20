@@ -1,5 +1,8 @@
 <div align="center">
 # Página Web Corporativa - ACTSIS LTDA
+</div>
+
+<div align="center">
 Este proyecto corresponde al desarrollo de la página web oficial de **ACTSIS LTDA**, una empresa especializada en soluciones tecnológicas y servicios de consultoría informática. La página busca transmitir profesionalismo, claridad y accesibilidad para sus clientes actuales y potenciales.
 
 🌐 Ver Demo en Vivo: (https://barliz4.github.io/Actsis-P/)  
