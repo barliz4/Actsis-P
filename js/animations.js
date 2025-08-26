@@ -63,3 +63,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+
+// Animación de entrada al hacer scroll
+const elementos = document.querySelectorAll('.animar');
+
+function mostrarAnimacion() {
+  elementos.forEach(el => {
+    const posicion = el.getBoundingClientRect().top;
+    const alturaPantalla = window.innerHeight - 100;
+    if (posicion < alturaPantalla) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', mostrarAnimacion);
+mostrarAnimacion();
