@@ -190,7 +190,7 @@ h2.subtitulos_generales {
 .texto_proyectos {
   text-align: center;
   font-size: 16px;
-  color: var(--color-principal);
+  color: var(--color-texto);
   margin: 20px auto; /* Centra el texto y añade margen */
   max-width: 800px; /* Limita el ancho del texto */
   line-height: 1.6; /* Mejora la legibilidad */
@@ -208,6 +208,7 @@ h2.subtitulos_generales {
   line-height: 1.5; /* Mejora la legibilidad */
   padding: 18px; 
   font-family: var(--fuente-general);
+  font-size: 18px;
 }
 
 .proyectos {
@@ -225,37 +226,79 @@ h2.subtitulos_generales {
 }
 
 .carta {
-    width: 250px;
-    border: 1px solid var(--color-texto);
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 0px 20px var(--color-principal);
+  width: 280px;
+  border: 1px solid var(--color-texto);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  background: var(--color-blanco);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .carta-imagen img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.carta:hover .carta-imagen img {
+  transform: scale(1.05);
+}
+
+.descripcion-carta {
+  font-family: var(--fuente-general);
+  font-size: 14px;
+  color: var(--color-texto) ;
+  margin: 10px 0 15px;
+  line-height: 1.5;
 }
 
 .boton-proyecto {
-    font-family: var(--fuente-general);
-    font-size: 1rem;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: var(--color-principal);
-    color: var(--color-blanco);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  font-family: var(--fuente-general);
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .boton-proyecto:hover {
-    background-color: var(--color-hover);
-    transform: scale(1.05);
-    transition: transform 0.3s;
+  background-color: var(--color-hover);
+  transform: scale(1.05);
+}
+
+.boton-proyecto span {
+  transition: transform 0.3s ease;
+}
+
+.boton-proyecto:hover span {
+  transform: translateX(4px);
+}
+
+/* Animación al hacer scroll */
+.animar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
