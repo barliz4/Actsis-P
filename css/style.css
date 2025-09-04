@@ -416,6 +416,7 @@ h2.subtitulos_generales {
   color: var(--color-texto);
   font-size: 1rem;
   line-height: 1.6;
+  font-family: var(--fuente-general);
 }
 
 .carrusel_filiales {
