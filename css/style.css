@@ -101,15 +101,6 @@ nav ul li {
 /*    SECCION INICIO         */
 /* -------------------------- */
 
-.titulo_actsis {
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-  font-weight: 900;
-  text-align: center;
-  font-size: 45px;
-  color: var(--color-principal); /* Color del título */
-  margin-top: 10px;
-}
-
 h2.subtitulos_generales {
   font-family:var(--fuente-subtitulos);
   text-align: center;
@@ -128,46 +119,117 @@ h2.subtitulos_generales {
   color: var(--color-principal); /* Color de los subtítulos */
 }
 
-.texto_inicio {
-  max-width: 600px;
-  text-align: justify;
-  font-family: var(--fuente-general);
-  font-size: 16px;
-  color: var(--color-texto);
-  line-height: 1.6;
-}
-
 .boton_inicio {
-  margin-top: 20px;
-  padding: 12px 24px;
+  display: block;                /* Hace que se comporte como bloque */
+  margin: 20px auto;             /* Centra horizontalmente */
+  padding: 12px 28px;
   background-color: var(--color-principal);
   color: var(--color-blanco);
   border: none;
-  border-radius: 6px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 17px;
   cursor: pointer;
-  transition: background-color 0.3s;
   font-family: var(--fuente-general);
+  transition: all 0.3s ease;     /* Transición más fluida */
+  text-align: center;            /* Asegura que el texto quede centrado */
+  max-width: fit-content;        /* El ancho se ajusta al contenido */
 }
 
 .boton_inicio:hover {
   background-color: var(--color-hover);
+  transform: scale(1.05);
 }
 
 .contenido_quienes {
   display: flex;
-  align-items: center;        /* Centra verticalmente */
-  justify-content: center;    /* Centra todo en el contenedor */
-  gap: 40px;                  /* Espacio entre logo y texto */
-  flex-wrap: wrap;            
-  padding: 20px;
+  align-items: center;       /*Centra verticalmente */
+  justify-content: center;
+  gap: 200px;
+  flex-wrap: wrap;          /* Permite que los elementos salten a la siguiente línea en pantallas pequeñas */
+  padding: 12px 10px;
+  
 }
 
 
-.logo_inicio {
+.logo_inicio img {
+  width: 280px;
+  background-color: transparent; /* Se quita el fondo */
+  height: auto; /* Permite que el logo mantenga su proporción */
+  transition: transform 0.3s; /* Transición suave al hacer hover */
+}
+
+
+.logo_inicio img:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+
+}
+
+/* Cifras debajo del logo */
+.cifras_inicio {
   display: flex;
   justify-content: center;
+  gap: 25px;
+  font-family: var(--fuente-general);
+  flex-wrap: wrap; /* Permite que las cifras salten a la siguiente línea en pantallas pequeñas */
+}
+
+.cifra h3 {
+  font-size: 1.6rem;
+  color: var(--color-principal);
+}
+
+.cifra p {
+  font-size: 0.85rem;
+  color: var(--color-texto);
+  font-family: var(--fuente-general);
+}
+
+/* Texto general */
+.texto_inicio {
+  max-width: 600px;
+  text-align: left;
+  font-size: 16px;
+  color: var(--color-texto);
+  line-height: 1.7;
+  font-family: var(--fuente-general);
+}
+
+.items_quienes {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #f6eeee;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.725);
+  transition: transform 0.2s;
+}
+
+.item:hover {
+  transform:rotate3d(5, 1, 2, 5deg);
+  box-shadow: 0 4px 12px var(--color-hover);  
+}
+
+.icono {
+  font-size: 28px;
+  color: var(--color-principal);
+}
+
+.logo_inicio {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
+  max-width: 400px;
+  text-align: center;
   margin: 0;
   background-color: transparent; /* Se quita el fondo */
   width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
@@ -175,14 +237,9 @@ h2.subtitulos_generales {
   height: auto; /* Permite que el logo mantenga su proporción */
   transition: transform 0.3s; /* Transición suave al hacer hover */
 }
-      
-.logo_inicio img {
-  width: 250px;
-  max-width: 250%;   
-  background-color: var(--color-blanco);
-  transition: transform 0.3s; /* Transición suave al hacer hover */
-}
 
+
+      
 /* -------------------------- */
 /*--------- Proyectos -------------*/
 /* -------------------------- */
