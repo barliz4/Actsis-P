@@ -36,7 +36,7 @@ body {
 nav {
   background-color: var(--color-principal);
   padding: 20px 5%;
-  border-radius: 5px;
+  border-radius: 1px;
   position: fixed;   /*  Lo fija en la pantalla */
   top: 0;            /* Lo pega arriba */
   left: 0;           /* Lo pega a la izquierda */
@@ -50,7 +50,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 50px;
   flex-wrap: wrap; 
 }
 
@@ -107,7 +107,7 @@ h2.subtitulos_generales {
   font-size: 30px;
   color: var(--color-principal); /* Color de los subtítulos */
   margin-top: 20px;
-  margin: 20px;
+  margin: 10px;
 }
 
 .subtitulos_generales {
@@ -173,6 +173,7 @@ h2.subtitulos_generales {
   flex-wrap: wrap; /* Permite que las cifras salten a la siguiente línea en pantallas pequeñas */
 }
 
+
 .cifra h3 {
   font-size: 1.6rem;
   color: var(--color-principal);
@@ -183,6 +184,7 @@ h2.subtitulos_generales {
   color: var(--color-texto);
   font-family: var(--fuente-general);
 }
+
 
 /* Texto general */
 .texto_inicio {
@@ -514,9 +516,9 @@ h2.subtitulos_generales {
 /* -------------------------- */
   
 #contacto {
-  padding: 40px;
+  padding: 20px;
   background: linear-gradient(0deg, var(--color-texto) 30%, var(--color-principal) 100%);
-  border-radius: 12px;
+  border-radius: 4px;
   max-width: 600px;
   margin: auto;
   box-shadow: 0 6px 20px var(--color-texto);
@@ -543,25 +545,26 @@ h2.subtitulos_generales {
   display: flex;
   flex-direction: column;
   font-family: var(--fuente-general);
-  
 }
 
 .campo label {
   font-weight: bold;
-  margin-bottom: 6px;
+  margin-bottom: 11px;
   color: var(--color-blanco);
 }
 
 .campo input,
 .campo textarea {
-  padding: 12px;
+  padding: 11px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 1rem;
   outline: none;
   background-color: var(--color-blanco);
   box-shadow: inset 0 2px 4px var(--color-texto);
   transition: all 0.3s ease;
+
+
 }
 
 /* Efecto al enfocar el campo */
@@ -578,15 +581,17 @@ h2.subtitulos_generales {
   text-align: center;
   font-size: 30px;
   color: var(--color-blanco); /* Color de los subtítulos */
-  margin: 20px;
+  margin: 8px;
 }
+
+
 
 /* Botón de enviar */
 .boton_contacto {
   background-color: var(--color-principal);
   color: var(--color-blanco);
   font-size: 1.1rem;
-  padding: 12px;
+  padding: 11px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
