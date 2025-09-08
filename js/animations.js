@@ -1,3 +1,49 @@
+// Función con ease-out para que la animación sea más suave
+function animarContador(elemento, valorFinal, duracion, sufijo = "") {
+  let inicio = 0;
+  let tiempoInicio = null;
+
+  function easeOutQuad(t) {
+    return t * (2 - t); // curva de aceleración -> desaceleración
+  }
+
+  function animacion(timestamp) {
+    if (!tiempoInicio) tiempoInicio = timestamp;
+    let progreso = (timestamp - tiempoInicio) / duracion;
+    progreso = Math.min(progreso, 1);
+
+    let valor = Math.floor(easeOutQuad(progreso) * valorFinal);
+    elemento.textContent = valor.toLocaleString("es-CO") + sufijo;
+
+    if (progreso < 1) {
+      requestAnimationFrame(animacion);
+    }
+  }
+
+  requestAnimationFrame(animacion);
+}
+
+// Animar los <h3> de las cifras
+document.querySelectorAll(".cifra h3").forEach(h3 => {
+  let texto = h3.textContent;
+  let numero = parseInt(texto.replace(/\D/g, "")) || 0;
+
+  if (numero > 0) {
+    let sufijo = texto.includes("M") ? "M+" : "+"; // Maneja el caso de 3M+
+    animarContador(h3, numero, 2000, sufijo);
+  }
+});
+
+// Animar también los elementos con clase .contador
+document.querySelectorAll(".contador").forEach(counter => {
+  let valorFinal = +counter.getAttribute("data-target") || 0;
+  if (valorFinal > 0) {
+    animarContador(counter, valorFinal, 2000);
+  }
+});
+
+
+
 // ------------------------------------------------------ CARRUSEL, SERVICIOS --------------------------------------- -- //
 const slidesContainer = document.querySelector(".slides_container");
 const btnLeft = document.querySelector(".btn-carrusel.left");
