@@ -13,7 +13,11 @@
 <body>
   <header>
     <nav>
-      <!-- agregar clase si se implementa un NAV adicional -->
+      <!-- Botón hamburguesa -->
+      <button class="hamburger" id="hamburger">
+        ☰
+      </button>
+
       <ul class="navbar">
         <!-- barra de navegación -->
         <li class="nav-item">
@@ -35,73 +39,76 @@
     </nav>
 
 
-<section id="inicio">
-  <div class="contenedor_inicio">
-    <div class="contenido_quienes">
-      
-      <!-- Logo con cifras -->
-      <div class="logo_inicio">
-        <img src="imagenes/logoactsis2-removebg-preview.png" alt="Logo de ACTSIS LTDA" />
+    <section id="inicio">
+      <div class="contenedor_inicio">
+        <div class="contenido_quienes">
 
-        <!-- Cifras destacadas debajo del logo -->
-        <div class="cifras_inicio">
-          <div class="cifra">
-            <h3>20+</h3>
-            <p>Años de experiencia</p>
+          <!-- Logo con cifras -->
+          <div class="logo_inicio">
+            <img src="imagenes/logoactsis2-removebg-preview.png" alt="Logo de ACTSIS LTDA" />
+
+            <!-- Cifras destacadas debajo del logo -->
+            <div class="cifras_inicio">
+              <div class="cifra">
+                <h3>20+</h3>
+                <p>Años de experiencia</p>
+              </div>
+              <div class="cifra">
+                <h3><span class="contador" data-target="4">0</span>M+</h3>
+                <p>Usuarios en Colombia</p>
+              </div>
+              <div class="cifra">
+                <h3>9</h3>
+                <p>Departamentos cubiertos</p>
+              </div>
+            </div>
           </div>
-          <div class="cifra">
-            <h3><span class="contador" data-target="4">0</span>M+</h3>  
-            <p>Usuarios en Colombia</p>
-          </div>
-          <div class="cifra">
-            <h3>9</h3>
-            <p>Departamentos cubiertos</p>
+
+          <!-- Texto descriptivo -->
+          <div class="texto_inicio">
+            <h2 class="subtitulos_generales">¿Quiénes somos?</h2>
+            <p>
+              En ACTSIS LTDA somos una empresa comprometida con el desarrollo
+              tecnológico y la excelencia en la prestación de servicios
+              informáticos y administrativos.
+            </p>
+
+            <!-- Bloques destacados -->
+            <div class="items_quienes">
+              <div class="item">
+                <span class="icono">⚙️</span>
+                <div>
+                  <h3>Soluciones tecnológicas</h3>
+                  <p>Brindamos soluciones integrales que optimizan los procesos empresariales y apoyan la transformación
+                    digital.</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <span class="icono">🤝</span>
+                <div>
+                  <h3>Confianza a largo plazo</h3>
+                  <p>Trabajamos con responsabilidad, innovación y calidad, adaptándonos a las necesidades de cada
+                    cliente.</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <span class="icono">📊</span>
+                <div>
+                  <h3>Cifras y resultados</h3>
+                  <p>Cerca de 3’000.000 de suscriptores en 9 departamentos colombianos operan con el sistema SAC©ACTSIS.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón -->
+            <button class="boton_inicio">Conocer más sobre ACTSIS →</button>
           </div>
         </div>
       </div>
-
-      <!-- Texto descriptivo -->
-      <div class="texto_inicio">
-        <h2 class="subtitulos_generales">¿Quiénes somos?</h2>
-        <p>
-          En ACTSIS LTDA somos una empresa comprometida con el desarrollo
-          tecnológico y la excelencia en la prestación de servicios
-          informáticos y administrativos.
-        </p>
-
-        <!-- Bloques destacados -->
-        <div class="items_quienes">
-          <div class="item">
-            <span class="icono">⚙️</span>
-            <div>
-              <h3>Soluciones tecnológicas</h3>
-              <p>Brindamos soluciones integrales que optimizan los procesos empresariales y apoyan la transformación digital.</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <span class="icono">🤝</span>
-            <div>
-              <h3>Confianza a largo plazo</h3>
-              <p>Trabajamos con responsabilidad, innovación y calidad, adaptándonos a las necesidades de cada cliente.</p>
-            </div>
-          </div>
-
-          <div class="item">
-            <span class="icono">📊</span>
-            <div>
-              <h3>Cifras y resultados</h3>
-              <p>Cerca de 3’000.000 de suscriptores en 9 departamentos colombianos operan con el sistema SAC©ACTSIS.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Botón -->
-        <button class="boton_inicio">Conocer más sobre ACTSIS →</button>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!--Sección Proyectos-->
@@ -223,12 +230,18 @@
       </p>
 
       <div class="carrusel_filiales">
-        <div class="filial"> <a href="https://www.essa.com/" target="_blank" rel="noopener noreferrer"> <img src="imagenes/ESSA-removebg-preview.png" alt="ESSA"/> </a> </div> 
-        <div class="filial"> <a href="https://www.celsia.com/es/" target="_blank" rel="noopener noreferrer"><img src="imagenes/celsia-removebg-preview.png" alt="Celsia" /></a></div> 
-        <div class="filial"> <a href="https://sopesa.com/" target="_blank" rel="noopener noreferrer"> <img src="imagenes/Sopesa_logo-removebg-preview.png" alt="SOPESA"/> </a> </div>
-        <div class="filial"> <a href="https://www.epm.com.co/" target="_blank" rel="noopener noreferrer"> <img src="imagenes/EPM_logo-removebg-preview.png" alt="EPM"/> </a> </div>
-        <div class="filial"> <a href="https://www.edeq.com.co/" target="_blank" rel="noopener noreferrer"> <img src="imagenes/EDEQ-removebg-preview.png" alt="EDEQ"/> </a> </div>
-        <div class="filial"> <a href="https://www.cens.com.co/" target="_blank" rel="noopener noreferrer"> <img src="imagenes/CENS_LOGO-removebg-preview.png" alt="Centrales"/> </a> </div>
+        <div class="filial"> <a href="https://www.essa.com/" target="_blank" rel="noopener noreferrer"> <img
+              src="imagenes/ESSA-removebg-preview.png" alt="ESSA" /> </a> </div>
+        <div class="filial"> <a href="https://www.celsia.com/es/" target="_blank" rel="noopener noreferrer"><img
+              src="imagenes/celsia-removebg-preview.png" alt="Celsia" /></a></div>
+        <div class="filial"> <a href="https://sopesa.com/" target="_blank" rel="noopener noreferrer"> <img
+              src="imagenes/Sopesa_logo-removebg-preview.png" alt="SOPESA" /> </a> </div>
+        <div class="filial"> <a href="https://www.epm.com.co/" target="_blank" rel="noopener noreferrer"> <img
+              src="imagenes/EPM_logo-removebg-preview.png" alt="EPM" /> </a> </div>
+        <div class="filial"> <a href="https://www.edeq.com.co/" target="_blank" rel="noopener noreferrer"> <img
+              src="imagenes/EDEQ-removebg-preview.png" alt="EDEQ" /> </a> </div>
+        <div class="filial"> <a href="https://www.cens.com.co/" target="_blank" rel="noopener noreferrer"> <img
+              src="imagenes/CENS_LOGO-removebg-preview.png" alt="Centrales" /> </a> </div>
       </div>
     </section>
 

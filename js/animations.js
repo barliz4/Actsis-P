@@ -1,4 +1,4 @@
-// Función con ease-out para que la animación sea más suave
+// Función con ease-out para que la animación sea más suave.
 function animarContador(elemento, valorFinal, duracion, sufijo = "") {
   let inicio = 0;
   let tiempoInicio = null;
