@@ -1,4 +1,4 @@
-// Función con ease-out para que la animación sea más suave.
+// Función con ease-out para que la animación sea más suave
 function animarContador(elemento, valorFinal, duracion, sufijo = "") {
   let inicio = 0;
   let tiempoInicio = null;
@@ -84,12 +84,12 @@ document.querySelector(".formulario_contacto").addEventListener("submit", functi
 
 // ------------------------------------------------------ NAV BAR, HACER SCROL --------------------------------------- -- //
 
-// Selecciona todos los enlaces <a> cuyo atributo href comience con "#" 
+// selecciona todos los enlaces <a> cuyo atributo href comience con "#" 
 // (es decir, los que apuntan a una sección dentro de la misma página)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   
-  // A cada enlace encontrado, le agregamos un "escuchador" de eventos (event listener)
-  // que se ejecuta cuando el usuario hace clic en él.
+  // A cada enlace encontrado, se le agrega un "escuchador" de eventos (event listener)
+  // que se ejecuta cuando el usuario hace clic en el.
   anchor.addEventListener('click', function(e) {
     
     // Previene el comportamiento por defecto del navegador,
@@ -100,7 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     // Ejemplo: si el enlace es <a href="#contacto">, busca el elemento con id="contacto".
     const destino = document.querySelector(this.getAttribute('href'));
     
-    // Realiza el desplazamiento suave hacia el elemento destino.
+    // realiza el desplazamiento suave hacia el elemento destino.
     // - behavior: 'smooth' → activa el scroll animado
     // - block: 'start' → alinea el inicio (top) de la sección con la parte superior de la ventana
     destino.scrollIntoView({
@@ -111,7 +111,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Animación de entrada al hacer scroll
+// animación de entrada al hacer scroll
 const elementos = document.querySelectorAll('.animar');
 
 function mostrarAnimacion() {
