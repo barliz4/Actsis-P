@@ -639,4 +639,92 @@ h2.subtitulos_generales {
   }
 }
 
+/* =========================================================
+    FOOTER
+========================================================= */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items:left; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  gap: 12px;
+}
+
+.footer {
+  background-color: black;     /*Fondo del Footer*/
+  padding: 40px 20px 0;
+  font-family: var(--fuente-general);
+}
+
+.logo-footer {
+  width: 270px;
+  height: 200px;
+  margin-bottom: 2px;
+  background-color: transparent;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+} 
+
+.footer-col .resaltado {
+  color: var(--color-blanco); 
+  font-family: var(--fuente-subtitulos);
+  font-size: 1.84rem; /*tamaño texto ACTSIS*/
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--color-principal); /* Color Sobre Nosotros, Servicios, Contactanos */
+  font-family: var(--fuente-general);
+}
+
+.footer-col p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--color-hover);
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: var(--color-hover);
+}
+
+.footer-bottom {
+  background-color: var(--color-principal); /* Franja inferior */
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 10px;  
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+
+
+
   
