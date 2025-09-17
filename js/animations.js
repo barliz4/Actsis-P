@@ -1,3 +1,14 @@
+// ------------------------------------------------------ Nav bar, hamburger--------------------------------------- -- //
+// Seleccionamos elementos
+const hamburger = document.querySelector(".hamburger");
+const navbar = document.querySelector(".navbar");
+
+// Evento click
+hamburger.addEventListener("click", () => {
+  navbar.classList.toggle("active"); // agrega o quita la clase
+});
+
+// ------------------------------------------------------  --------------------------------------- -- //
 // Función con ease-out para que la animación sea más suave
 function animarContador(elemento, valorFinal, duracion, sufijo = "") {
   let inicio = 0;
