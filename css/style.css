@@ -96,12 +96,55 @@ nav ul li {
 /* ===========================
     RESPONSIVE NAVBAR   
 =========================== */
+@media (max-width: 1200px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
+  .contenido_quienes .logo_inicio{
+    max-width: auto;
+    max-height: auto;
+  }
+
+  .navbar {
+    display: none; 
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-principal);
+    padding: 20px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;         /* Evita desbordes */
+    width: 100%;       /* Ocupa todo el ancho */
+  }
+}
+
+
 @media (max-width: 1024px) {
   .hamburger {
     display: block;
     position: absolute;
     top: 1px;
     right: 20px;
+  }
+
+    .contenido_quienes .logo_inicio{
+    max-width: auto;
+    max-height: auto;
   }
 
   .navbar {
@@ -328,24 +371,27 @@ h2.subtitulos_generales {
     RESPONSIVE SECCION INICIO   
 =========================== */
 
-/* Tablets y celulares grandes */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .texto_inicio p {
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 0 15px; /* espacio a los lados */
+    font-size: 15px;
+    line-height: 1.4;
+    padding: 0 10px;
   }
 
-  h2.subtitulos_generales,  
-  .subtitulos_generales { 
-    font-size: 22px;
-    margin: 15px;
-    font-family: var(--fuente-subtitulos);
+  .item {
+    margin-inline: 10px;
+    max-width: 100%;
   }
 
-  .boton_inicio {
-    padding: 10px 20px;
-    font-size: 5px;
+  .items_quienes {
+    max-width:auto;
+    max-height: auto;
+  }
+
+  h2.subtitulos_generales,
+  .subtitulos_generales {
+    font-size: 30px;
+    margin: 10px;
   }
 
   .contenido_quienes {
@@ -354,8 +400,50 @@ h2.subtitulos_generales {
     text-align: center;
   }
 
+  .boton_inicio {
+    width: 100%;           /* botón ocupa todo el ancho */
+    max-width: 400px;      /* limite para que no se vea exagerado */
+    font-size: 17px;
+  }
+
   .logo_inicio img {
     width: 200px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .texto_inicio p {
+    font-size: 15px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .item {
+    margin-inline: 10px;
+    max-width: 100%;
+  }
+
+  h2.subtitulos_generales,
+  .subtitulos_generales {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .contenido_quienes {
+    flex-direction: column;  /* Texto arriba, imagen abajo */
+    gap: 40px;
+    text-align: center;
+  }
+
+  .boton_inicio {
+    width: 100%;           /* botón ocupa todo el ancho */
+    max-width: 280px;      /* limite para que no se vea exagerado */
+    font-size: 14px;
+  }
+
+  .logo_inicio img {
+    width: 160px;
   }
 }
 
@@ -376,6 +464,12 @@ h2.subtitulos_generales {
   .subtitulos_generales {
     font-size: 25px;
     margin: 10px;
+  }
+
+  .contenido_quienes {
+    flex-direction: column;  /* Texto arriba, imagen abajo */
+    gap: 40px;
+    text-align: center;
   }
 
   .boton_inicio {
@@ -508,26 +602,84 @@ h2.subtitulos_generales {
   transform: translateY(0);
 }
 
-/* RESPONSIVE SECCION PROYECTOS   */
+/* -----------------RESPONSIVE SECCION PROYECTOS-------------------   */
 
-/* Tablets medianas (pantallas <= 1024px) */
-@media (max-width: 1024px) {
-  .texto_proyectos {
-    font-size: 1rem;
-    padding: 8px;
-    max-width: 90%; /* texto más fluido */
+@media (max-width: 1200px) {
+  .parrafos { /*Subtitulos de descripcion*/
+    font-size: 16px;
+    padding: 12px;
   }
 
   .proyectos {
-    gap: 25px;
+    flex-direction:column; /* las cartas se apilan */
+    align-items: center;
+    gap: 20px;
   }
 
   .carta {
-    width: 240px; /* cartas un poco más pequeñas */
+    width: 70%; /* ocupan casi todo el ancho */
+    max-width: 300px;
+    padding: 30px;
+    margin-bottom: 20px;  
+    }
+
+  .descripcion-carta {
+    font-size: 13px;
+    text-align: center;
   }
+  .carta-imagen img {
+    max-height: 220px;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    max-width:auto;
+  }
+
+    .boton-proyecto {
+    width: 100%; /* botón ocupa todo el ancho */
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
 }
 
-/* Tablets pequeñas y celulares grandes (<= 768px) */
+
+@media (max-width: 1024px) {
+  .parrafos { /*Subtitulos de descripcion*/
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .proyectos {
+    flex-direction:column; /* las cartas se apilan */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .carta {
+    width: 70%; /* ocupan casi todo el ancho */
+    max-width: 300px;
+    padding: 30px;
+    margin-bottom: 20px;  
+    }
+
+  .descripcion-carta {
+    font-size: 13px;
+    text-align: center;
+  }
+  .carta-imagen img {
+    max-height: 220px;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    max-width:auto;
+  }
+
+    .boton-proyecto {
+    width: 100%; /* botón ocupa todo el ancho */
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+}
+
+
 @media (max-width: 768px) {
   .parrafos { /*Subtitulos de descripcion*/
     font-size: 16px;
@@ -564,7 +716,7 @@ h2.subtitulos_generales {
 
 }
 
-/* Celulares pequeños (<= 480px) */
+/* Celulares pequeños */
 @media (max-width: 480px) {
   .texto_proyectos {
     font-size: 0.9rem;
@@ -682,9 +834,45 @@ h2.subtitulos_generales {
   transform: scale(1.2);
 }
 
-/* RESPONSIVE SECCION SERVICIOS   */
+/*-------- RESPONSIVE SECCION SERVICIOS-----------   */
 
-/* Tablets medianas (<= 1024px) */
+
+@media (max-width: 1200px) {
+.carrusel_servicios {
+    flex-direction:row;
+  }
+
+  .slides_container {
+    gap: 22px;
+    max-height: auto;
+  }
+
+  .slide {
+    flex: 0 0 220px;
+    min-width: 200px;
+    padding: 5px;
+  }
+
+  .slide h3 {
+    font-size: 1rem;
+  }
+
+  .slide p {
+    font-size: 0.85rem;
+  }
+
+   .btn-carrusel {
+    position: static;
+    margin: 25px 8px 0;
+    max-width: auto;
+    max-width: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+}
+
+
 @media (max-width: 1024px) {
 .carrusel_servicios {
     flex-direction:row;
