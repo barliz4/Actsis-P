@@ -1,0 +1,52 @@
+/*  VARIABLES DE COLOR Y TIPOGRAFÍA */
+:root {
+  --color-principal: #006980;
+  --color-blanco: #ffffff;
+  --color-hover: #00d5ff;
+  --color-texto: #000000d8;
+  --fondo-seccion: #afafaf;
+  --borde-radio: 10px;
+  --fuente-subtitulos: "Barlow", Helvetica, Arial, sans-serif;
+  --fuente-general: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: var(--fuente-general);
+    background-color: #afafaf;
+}
+
+header h1 {
+  font-weight: bold;
+  color: var(--color-principal)
+}
+
+#info .card {
+  border: none;
+  transition: transform 0.3s ease;
+
+}
+
+#info .card:hover {
+  transform: translateY(-10px);
+  background-color: #0080ff;
+}
+
+#carrusel img {
+  height: 500px;       /* Altura fija para todas */
+  object-fit: cover;   /* Ajusta sin deformar */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-principal);
+  border-radius: 50%;
+  background-size: 100%, 100%;
+  border: 2px solid var(--color-texto);
+    
+}
+
+
+
+
