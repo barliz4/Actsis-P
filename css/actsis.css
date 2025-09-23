@@ -12,28 +12,81 @@
 
 body {
   font-family: var(--fuente-general);
-    background-color: #afafaf;
+  background-color: var(--color-blanco);
 }
 
 header h1 {
   font-weight: bold;
-  color: var(--color-principal)
 }
+
+/* ========================================  BOTON INICIO======== */
+
+.btn-custom { 
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  font-weight: bold;
+  border-radius: 6px;  
+  padding: 10px 13px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.btn-custom:hover {
+  background-color: var(--color-hover); 
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+/* ===================================== NAVBAR CUSTOM ======== */
+.navbar-custom {
+  background-color: var(--color-principal) !important; /* color de fondo */
+  padding: 9px 20px; 
+  height: 65px; /* altura fija del nav */
+}
+
+.navbar-custom .navbar-brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-blanco);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: uppercase;  
+}
+
+.navbar-custom .nav-link {
+  font-size: 1.3rem;
+  color: #f8f9fa !important;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.navbar-custom .nav-link:hover {
+  color: var(--color-hover) !important;
+}
+
+
+
+
+/* ==================================== CARDS ======== */
 
 #info .card {
   border: none;
   transition: transform 0.3s ease;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
 
 }
 
 #info .card:hover {
   transform: translateY(-10px);
-  background-color: #0080ff;
+  background-color: var(--color-hover);
+
 }
 
 #carrusel img {
   height: 500px;       /* Altura fija para todas */
   object-fit: cover;   /* Ajusta sin deformar */
+  margin-top: 70px ;
 }
 
 .carousel-control-prev-icon,
@@ -42,10 +95,12 @@ header h1 {
   height: 40px;
   background-color: var(--color-principal);
   border-radius: 50%;
-  background-size: 100%, 100%;
-  border: 2px solid var(--color-texto);
-    
+  background-size: 80%, 40%;
+  border: 2px solid var(--color-texto); 
+  padding: 20px 20px;
 }
+
+
 
 
 
