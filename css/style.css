@@ -753,7 +753,7 @@ h2.subtitulos_generales {
 ========================================================= */
 
 #servicios {
-  background-color: #7474844e;  /*Color temporal*/
+  background-color: #000000df;  /*Color temporal*/
   padding: 50px 0;
 }
 
@@ -763,7 +763,7 @@ h2.subtitulos_generales {
   margin: auto;
   text-align: center;
   font-family: var(--fuente-general);
-  color: var(--color-texto);
+  color: var(--color-blanco);
 }
 
 /* Carrusel */
@@ -774,6 +774,7 @@ h2.subtitulos_generales {
 }
 
 .slides_container {
+   transition: transform 0.5s ease-in-out;
   display: flex;
   gap: 20px;
   overflow: hidden;
@@ -782,7 +783,7 @@ h2.subtitulos_generales {
 
 .slide {
   flex: 0 0 300px;
-  min-width: 250px;
+  min-width: 300px; /* Cada slide ocupa toda la vista */
   padding: 20px;
   background-color: var(--color-blanco);
   border-radius: 10px;
