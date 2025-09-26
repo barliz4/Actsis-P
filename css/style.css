@@ -1127,7 +1127,7 @@ h2.subtitulos_generales {
 .formulario_contacto {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 13px;
 }
 
 .campo {
@@ -1161,7 +1161,7 @@ h2.subtitulos_generales {
 }
 
 .subtitulos_formulario {
-  margin: 8px;
+  margin: 2px;
   text-align: center;
   font-size: 30px;
   font-weight: 900;
