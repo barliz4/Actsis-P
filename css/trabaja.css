@@ -1,0 +1,295 @@
+/* Variables de color para fácil mantenimiento */
+:root {
+  --color-principal: #006980;
+  --color-blanco: #ffffff;
+  --color-hover: #00d5ff;
+  --color-texto: #000000d8;
+  --fondo-seccion: #afafaf;
+  --borde-radio: 10px;
+  --fuente-subtitulos: "Barlow", Helvetica, Arial, sans-serif;
+  --fuente-general: 'Montserrat', sans-serif;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo de la Sección Principal (Hero) */
+.hero {
+    background: var(--primary-color);
+    color: var(--light-text);
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botones de Llamada a la Acción (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--light-text);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid var(--light-text);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-color: var(--light-text);
+}
+
+.cta-button.secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    border-color: var(--secondary-color);
+}
+
+.cta-button.secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+/* Estilos de las Secciones */
+.section {
+    padding: 40px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.section ul li {
+    background-color: #e9ecef;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Estilos de Vacantes (Cards) */
+.vacantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--light-text);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.ubicacion {
+    display: block;
+    color: var(--secondary-color);
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.apply-link {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.apply-link:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+/* Estilos de Contacto */
+.nota {
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* =========================================================
+                   SECCIÓN FOOTER 
+========================================================= */
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items:left; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  gap: 12px;
+}
+
+.footer {
+  background-color: black;     /*Fondo del Footer*/
+  padding: 40px 20px 0;
+  font-family: var(--fuente-general);
+}
+
+.logo-footer {
+  width: 270px;
+  height: 200px;
+  margin-bottom: 2px;
+  background-color: transparent;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+} 
+
+.footer-col .resaltado {
+  color: var(--color-blanco); 
+  font-family: var(--fuente-subtitulos);
+  font-size: 1.84rem; /*tamaño texto ACTSIS*/
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--color-principal); /* Color Sobre Nosotros, Servicios, Contactanos */
+  font-family: var(--fuente-general);
+}
+
+.footer-col p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--color-hover);
+}
+
+.footer-bottom {
+  background-color: var(--color-principal); /* Franja inferior */
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 10px;  
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/*=========================== RESPONSIVE FOOTER =========================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .footer-contenido {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction:row;
+  }
+
+  .footer-col p{
+    margin-bottom: 20px; 
+    justify-content: space-between;           
+    text-align: left;      
+  }
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+}
+
+.logo-footer {
+  width: 220px;
+  height: auto;
+  margin: auto;
+}
+
+/* Laptops grandes */
+@media (max-width: 1200px) {
+  .footer {
+    justify-content: center;
+    gap: 30px; /* espacio entre columnas */
+  }
+}
+
+/* Media Query para Responsividad */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .section ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
