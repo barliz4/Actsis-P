@@ -328,10 +328,14 @@ nav ul li {
     text-align: center;
     justify-content: center;
     align-self: center;
-    font-family: var(--fuente-alternativa);
-    background-color: var(--fondo-seccion);
+    font-family: var(--fuente-general);
     border-radius: var(--borde-radio);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    font-size: 2.5em;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s; /* empieza después de la sección */
+
 }
 
 .card {
@@ -344,7 +348,8 @@ nav ul li {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-14px);
+    box-shadow: 0 8px 16px var(--color-hover);
 }
 
 .card h3 {
