@@ -77,9 +77,6 @@ nav ul {
   text-transform: uppercase;  /* Texto en mayúsculas */
 }
 
-nav ul li {
-  /* Lugar reservado para decoraciones individuales */
-}
 
 /* Enlaces de navegación */
 .nav-link {
@@ -379,7 +376,7 @@ nav ul li {
     margin-bottom: 15px;
     font-weight: bold;
     text-align: center;
-    font-family: var(--fuente-alternativa);
+    font-family: var(--fuente-general);
 
 }
 
@@ -423,6 +420,9 @@ a.apply-link {    /* Enlace de postulación */
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    font-family: var(--fuente-alternativa);
+    font-size: 1.2em;
+    
 
 }
 
@@ -577,17 +577,4 @@ a.apply-link {    /* Enlace de postulación */
     justify-content: center;
     gap: 30px; /* espacio entre columnas */
   }
-}
-
-/* Media Query para Responsividad */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5em;
-    }
-    
-    .section ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
 }
