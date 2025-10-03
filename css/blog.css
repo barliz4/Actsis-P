@@ -1,0 +1,427 @@
+/*  VARIABLES DE COLOR Y TIPOGRAFÍA */
+:root {
+  --color-principal: #006980;
+  --color-blanco: #ffffff;
+  --color-hover: #00d5ff;
+  --color-texto: #000000d8;
+  --fondo-seccion: #afafaf;
+  --borde-radio: 10px;
+  --fuente-subtitulos: "Barlow", Helvetica, Arial, sans-serif;
+  --fuente-general: 'Montserrat', sans-serif;
+  --fuente-alternativa: cambria, cochin, georgia, times, 'times new roman', serif;
+}
+
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav { /* Contenedor general del nav */
+  background-color: var(--color-principal);
+  padding: 20px 5%;
+  border-radius: 1px;
+  position: fixed;   /*  Lo fija en la pantalla */
+  top: 0;            /* Lo pega arriba */
+  left: 0;           /* Lo pega a la izquierda */
+  width: 100%;       /* Que ocupe todo el ancho */
+  z-index: 1000;     /* Que quede por encima de todo */
+  font-family:Verdana, Geneva, Tahoma, sans-serif; /* Para el nav, se maneja una fuente distinta. */
+}
+
+.hamburger {  /* Botón hamburguesa (oculto en escritorio) */
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--color-blanco);
+  cursor: pointer;
+  z-index: 1100; /* encima del menú */
+}
+
+/* Contenedor principal de los ítems */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Lista de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;  /* Texto en mayúsculas */
+}
+
+nav ul li {
+  /* Lugar reservado para decoraciones individuales */
+}
+
+/* Enlaces de navegación */
+.nav-link {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--color-hover);
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* ===========================
+    RESPONSIVE NAVBAR   
+=========================== */
+@media (max-width: 1200px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
+  .contenido_quienes .logo_inicio{
+    max-width: auto;
+    max-height: auto;
+  }
+
+  .navbar {
+    display: none; 
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-principal);
+    padding: 20px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;         /* Evita desbordes */
+    width: 100%;       /* Ocupa todo el ancho */
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
+    .contenido_quienes .logo_inicio{
+    max-width: auto;
+    max-height: auto;
+  }
+
+  .navbar {
+    display: none; 
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-principal);
+    padding: 20px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;         /* Evita desbordes */
+    width: 100%;       /* Ocupa todo el ancho */
+  }
+
+  .nav-link {
+    width: 100%;       /* Cada enlace ocupa toda la fila */
+    font-size: 14px;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
+  .navbar {
+    display: none; 
+    flex-direction:row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-principal);
+    padding: 20px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;         /* Evita desbordes */
+    width: 100%;       /* Ocupa todo el ancho */
+  }
+
+  .nav-link {
+    width: 100%;       /* Cada enlace ocupa toda la fila */
+    font-size: 14px;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+/* =========================================================
+   BLOG
+========================================================= */
+
+
+/* Sección Blog */
+.blog-section {
+  padding: 60px 20px;
+  background: var(--color-blanco);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.blog-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: var(--color-principal);
+}
+
+.blog-section .intro {
+  font-size: 1rem;
+  color: var(--color-texto);
+  margin-bottom: 40px;
+}
+
+/* Contenedor Cards */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.blog-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+    border-bottom: 2px solid var(--color-principal);
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.category {
+  display: inline-block;
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color:    var(--color-texto);
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: #656464;
+  margin-bottom: 15px;
+}
+
+.excerpt {
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn:hover {
+  background: var(--color-hover);
+}
+
+/* =========================================================
+                   SECCIÓN FOOTER 
+========================================================= */
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items:left; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  gap: 12px;
+}
+
+.footer {
+  background-color: black;     /*Fondo del Footer*/
+  padding: 40px 20px 0;
+  font-family: var(--fuente-general);
+}
+
+.logo-footer {
+  width: 270px;
+  height: 200px;
+  margin-bottom: 2px;
+  background-color: transparent;
+}
+
+.footer-contenido {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+} 
+
+.footer-col .resaltado {
+  color: var(--color-blanco); 
+  font-family: var(--fuente-subtitulos);
+  font-size: 1.84rem; /*tamaño texto ACTSIS*/
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--color-principal); /* Color Sobre Nosotros, Servicios, Contactanos */
+  font-family: var(--fuente-general);
+}
+
+.footer-col p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer-col a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--color-hover);
+}
+
+.footer-bottom {
+  background-color: var(--color-principal); /* Franja inferior */
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 10px;  
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/*=========================== RESPONSIVE FOOTER =========================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+
+  .footer-contenido {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction:row;
+  }
+
+  .footer-col p{
+    margin-bottom: 20px; 
+    justify-content: space-between;           
+    text-align: left;      
+  }
+}
+
+.footer-col h3 {
+  font-size: 1.2rem;
+}
+
+.logo-footer {
+  width: 220px;
+  height: auto;
+  margin: auto;
+}
+
+/* Laptops grandes */
+@media (max-width: 1200px) {
+  .footer {
+    justify-content: center;
+    gap: 30px; /* espacio entre columnas */
+  }
+}
