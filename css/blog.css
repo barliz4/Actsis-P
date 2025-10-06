@@ -11,6 +11,13 @@
   --fuente-alternativa: cambria, cochin, georgia, times, 'times new roman', serif;
 }
 
+/*  RESET BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 
 /* =========================================================
@@ -29,15 +36,7 @@ nav { /* Contenedor general del nav */
   font-family:Verdana, Geneva, Tahoma, sans-serif; /* Para el nav, se maneja una fuente distinta. */
 }
 
-.hamburger {  /* Botón hamburguesa (oculto en escritorio) */
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: var(--color-blanco);
-  cursor: pointer;
-  z-index: 1100; /* encima del menú */
-}
+
 
 /* Contenedor principal de los ítems */
 .navbar {
@@ -56,10 +55,6 @@ nav ul {
   padding: 0;
   margin: 0;
   text-transform: uppercase;  /* Texto en mayúsculas */
-}
-
-nav ul li {
-  /* Lugar reservado para decoraciones individuales */
 }
 
 /* Enlaces de navegación */
@@ -82,32 +77,21 @@ nav ul li {
     RESPONSIVE NAVBAR   
 =========================== */
 @media (max-width: 1200px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 1px;
-    right: 20px;
-  }
-
   .contenido_quienes .logo_inicio{
     max-width: auto;
     max-height: auto;
   }
 
   .navbar {
-    display: none; 
     flex-direction:row;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 20px 0;
+    padding: 0px 0;
   }
 
-  .navbar.active {
-    display: flex; /* Se muestra al activar */
-  }
 
   nav ul {
     flex-direction: column;
@@ -120,31 +104,19 @@ nav ul li {
 
 
 @media (max-width: 1024px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 1px;
-    right: 20px;
-  }
-
     .contenido_quienes .logo_inicio{
     max-width: auto;
     max-height: auto;
   }
 
   .navbar {
-    display: none; 
     flex-direction:row;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 20px 0;
-  }
-
-  .navbar.active {
-    display: flex; /* Se muestra al activar */
+    padding: 0px 0;
   }
 
   nav ul {
@@ -165,26 +137,14 @@ nav ul li {
 
 
 @media (max-width: 768px) {
-  .hamburger {
-    display: block;
-    position: absolute;
-    top: 1px;
-    right: 20px;
-  }
-
   .navbar {
-    display: none; 
     flex-direction:row;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 20px 0;
-  }
-
-  .navbar.active {
-    display: flex; /* Se muestra al activar */
+    padding: 0px 0;
   }
 
   nav ul {
@@ -205,7 +165,7 @@ nav ul li {
 
 
 /* =========================================================
-   BLOG
+                             BLOG
 ========================================================= */
 
 
@@ -215,12 +175,25 @@ nav ul li {
   background: var(--color-blanco);
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 30px;
 }
 
 .blog-section h2 {
   font-size: 2.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   color: var(--color-principal);
+  position: relative;         
+}
+
+/* Línea decorativa debajo del título */
+.blog-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--color-principal);
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
 .blog-section .intro {
@@ -230,10 +203,13 @@ nav ul li {
 }
 
 /* Contenedor Cards */
-.blog-container {
+.blog-contenedor {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  
 }
 
 /* Card */
@@ -242,31 +218,57 @@ nav ul li {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatIn 0.8s ease forwards;
+  opacity: 0; 
+  
 }
 
 .blog-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* ====== Retraso progresivo para cada card ====== */
+
+.blog-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.blog-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.blog-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.blog-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.blog-card:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+/* ====== ====================================== */
 
 .blog-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-    border-bottom: 2px solid var(--color-principal);
+  border-bottom: 2px solid var(--color-principal);
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.1);
 }
 
 .blog-content {
   padding: 20px;
   text-align: left;
   flex: 1;
-  display: flex;
+  display: flex;  
   flex-direction: column;
 }
 
-.category {
+.categoria {
   display: inline-block;
   background: var(--color-principal);
   color: var(--color-blanco);
@@ -274,25 +276,31 @@ nav ul li {
   padding: 5px 12px;
   border-radius: 20px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .blog-content h3 {
+  text-align: center;
   font-size: 1.3rem;
   margin-bottom: 5px;
   color:    var(--color-texto);
-}
-
-.meta {
-  font-size: 0.85rem;
-  color: #656464;
   margin-bottom: 15px;
 }
 
-.excerpt {
+.meta {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #646465;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.descripcion {
   font-size: 0.95rem;
   color: var(--color-texto);
   margin-bottom: 20px;
   flex-grow: 1;
+  text-align: justify;
 }
 
 .btn {
@@ -304,11 +312,120 @@ nav ul li {
   border-radius: 8px;
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
-  align-self: flex-start;
-}
+  align-self: center;
+  }
+
 
 .btn:hover {
   background: var(--color-hover);
+}
+
+/*================ RESPONSIVE BLOG ================ */
+@media (max-width: 1400px) {
+  .blog-section {
+    padding: 40px 15px;
+    margin-top: 50px;
+  }
+
+  .blog-contenedor {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 400px));
+    gap: 30px;
+  }
+
+  .blog-section h2 {
+    font-size: 3rem;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+}
+
+.blog-content {
+    padding: 38px;
+  }
+
+  .blog-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .descripcion {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+@media (max-width: 1200px) {
+  .blog-section {
+    padding: 40px 15px;
+  }
+
+  .blog-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog-section {
+    padding: 40px 15px;
+  }
+
+  .blog-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 40px 15px;
+  }
+
+  .blog-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .blog-section {
+    padding: 40px 15px;
+  }
+
+  .blog-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .blog-card img {
+    height: 180px;
+  }
+}
+
+/*=== keyframes ==== */
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* =========================================================
