@@ -1,4 +1,4 @@
-/*  VARIABLES DE COLOR Y TIPOGRAFÍA */
+/*VARIABLES DE COLOR Y TIPOGRAFÍA */
 :root {
   --color-principal: #006980;
   --color-blanco: #ffffff;
@@ -18,7 +18,27 @@
   padding: 0;
 }
 
+body {
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 25px; 
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 /* =========================================================
    NAVBAR
@@ -35,8 +55,6 @@ nav { /* Contenedor general del nav */
   z-index: 1000;     /* Que quede por encima de todo */
   font-family:Verdana, Geneva, Tahoma, sans-serif; /* Para el nav, se maneja una fuente distinta. */
 }
-
-
 
 /* Contenedor principal de los ítems */
 .navbar {
@@ -56,6 +74,7 @@ nav ul {
   margin: 0;
   text-transform: uppercase;  /* Texto en mayúsculas */
 }
+
 
 /* Enlaces de navegación */
 .nav-link {
@@ -77,6 +96,13 @@ nav ul {
     RESPONSIVE NAVBAR   
 =========================== */
 @media (max-width: 1200px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
   .contenido_quienes .logo_inicio{
     max-width: auto;
     max-height: auto;
@@ -89,9 +115,11 @@ nav ul {
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 0px 0;
   }
 
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
+  }
 
   nav ul {
     flex-direction: column;
@@ -104,6 +132,13 @@ nav ul {
 
 
 @media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
     .contenido_quienes .logo_inicio{
     max-width: auto;
     max-height: auto;
@@ -116,7 +151,10 @@ nav ul {
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 0px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
   }
 
   nav ul {
@@ -130,13 +168,19 @@ nav ul {
   .nav-link {
     width: 100%;       /* Cada enlace ocupa toda la fila */
     font-size: 14px;
-    padding: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
 
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 20px;
+  }
+
   .navbar {
     flex-direction:row;
     justify-content: center;
@@ -144,7 +188,10 @@ nav ul {
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 0px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Se muestra al activar */
   }
 
   nav ul {
