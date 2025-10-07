@@ -1,4 +1,4 @@
-/*  VARIABLES DE COLOR Y TIPOGRAFÍA */
+/*VARIABLES DE COLOR Y TIPOGRAFÍA */
 :root {
   --color-principal: #006980;
   --color-blanco: #ffffff;
@@ -21,10 +21,12 @@
 body {
   line-height: 1.6;
   margin: 0;
-  padding-top: 80px; /* Ajusta según la altura real del nav */
-  /* background-color: var(--color-blanco); */
+  padding-top: 25px; 
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 .container {
     max-width: 1200px;
@@ -46,16 +48,6 @@ nav { /* Contenedor general del nav */
   width: 100%;       /* Que ocupe todo el ancho */
   z-index: 1000;     /* Que quede por encima de todo */
   font-family:Verdana, Geneva, Tahoma, sans-serif; /* Para el nav, se maneja una fuente distinta. */
-}
-
-.hamburger {  /* Botón hamburguesa (oculto en escritorio) */
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: var(--color-blanco);
-  cursor: pointer;
-  z-index: 1100; /* encima del menú */
 }
 
 /* Contenedor principal de los ítems */
@@ -111,14 +103,12 @@ nav ul {
   }
 
   .navbar {
-    display: none; 
     flex-direction:row;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 20px 0;
   }
 
   .navbar.active {
@@ -149,14 +139,12 @@ nav ul {
   }
 
   .navbar {
-    display: none; 
     flex-direction:row;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 20px 0;
   }
 
   .navbar.active {
@@ -174,7 +162,6 @@ nav ul {
   .nav-link {
     width: 100%;       /* Cada enlace ocupa toda la fila */
     font-size: 14px;
-    padding: 8px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
@@ -189,14 +176,12 @@ nav ul {
   }
 
   .navbar {
-    display: none; 
     flex-direction:row;
     justify-content: center;
     gap: 10px;
     width: 100%;
     text-align: center;
     background-color: var(--color-principal);
-    padding: 20px 0;
   }
 
   .navbar.active {
@@ -220,6 +205,7 @@ nav ul {
 }
 
 
+
 /* =========================================================
                    SECCIONES
 =========================================================*/
@@ -232,7 +218,7 @@ nav ul {
 }
 
 .section h2 {
-    color: var(--color-texto);
+    color: var(--color-texto);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     font-family: var(--fuente-subtitulos);
     font-size: 2.5em;
     margin-bottom: 20px;
