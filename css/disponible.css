@@ -1,0 +1,101 @@
+:root {
+  --color-principal: #006980;
+  --color-blanco: #ffffff;
+  --color-hover: #00d5ff;
+  --color-texto: #000000d8;
+  --color-azul_extra: #004cff;
+  --fondo-seccion: #afafaf;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-azul_extra) 22%, var(--color-hover) 50%, var(--color-texto) 78%);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1 {
+  margin: 0;
+  padding: 0 1rem;
+  font-size: clamp(2.5rem, 10vw, 6.5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.25), 0 1px 0 rgba(255,255,255,0.06) inset;
+  -webkit-text-stroke: 0.6px rgba(255,255,255,0.08);
+  font-weight: 800;
+}
+
+.wrap {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 2rem;
+  margin-right: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #fff;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@media (max-width: 420px) {
+  h1 { font-size: clamp(2.2rem, 12vw, 4rem); }
+  .social-icons a { font-size: 1.6rem; }
+  .logo { width: 70px; }
+}

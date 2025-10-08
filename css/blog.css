@@ -458,10 +458,15 @@ nav ul {
   }
 
   .blog-card img {
-    height: 180px;
+    height: 120px;
+  }
+
+  .blog-card {
+    padding:20px;
   }
 }
 
+ 
 /*=== keyframes ==== */
 
 @keyframes floatIn {
