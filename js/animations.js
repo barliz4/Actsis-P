@@ -137,3 +137,29 @@ function mostrarAnimacion() {
 
 window.addEventListener('scroll', mostrarAnimacion);
 mostrarAnimacion();
+
+// ------------------------------------------------------ FORMULARIO --------------------------------------- -- //
+
+function guardarFormulario(event) {
+  event.preventDefault(); // evita recargar la página
+
+  const datos = {
+    nombre: document.getElementById('nombre').value,
+    correo: document.getElementById('correo').value,
+    telefono: document.getElementById('telefono').value,
+    asunto: document.getElementById('asunto').value,
+    mensaje: document.getElementById('mensaje').value
+  };
+
+  // Guardamos los datos en un archivo temporal local (JSON)
+  fetch('http://localhost:8000/guardar', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(datos)
+  })
+  .then(res => res.text())
+  .then(data => alert(data))
+  .catch(err => alert('Error al guardar: ' + err));
+}
