@@ -774,11 +774,12 @@ h2.subtitulos_generales {
 }
 
 .slides_container {
-   transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   display: flex;
   gap: 20px;
   overflow: hidden;
-  scroll-behavior: smooth;
+  
+   scroll-snap-type: x mandatory;
 }
 
 .slide {
@@ -792,6 +793,7 @@ h2.subtitulos_generales {
   text-align: center;
   flex-shrink: 0;
   transition: transform 0.3s;
+  scroll-snap-align: start; 
 }
 
 .slide:hover {
@@ -836,6 +838,42 @@ h2.subtitulos_generales {
 }
 
 /*-------- RESPONSIVE SECCION SERVICIOS-----------   */
+
+@media (max-width: 1400px) {
+.carrusel_servicios {
+    flex-direction:row;
+  }
+
+  .slides_container {
+    gap: 22px;
+    max-height: auto;
+  }
+
+  .slide {
+    flex: 0 0 220px;
+    min-width: 200px;
+    padding: 5px;
+  }
+
+  .slide h3 {
+    font-size: 1rem;
+  }
+
+  .slide p {
+    font-size: 0.85rem;
+  }
+
+   .btn-carrusel {
+    position: static;
+    margin: 25px 8px 0;
+    max-width: auto;
+    max-width: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+}
+
 
 
 @media (max-width: 1200px) {
