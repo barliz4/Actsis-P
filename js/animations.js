@@ -59,15 +59,17 @@ document.querySelectorAll(".contador").forEach(counter => {
 const slidesContainer = document.querySelector(".slides_container");
 const btnLeft = document.querySelector(".btn-carrusel.left");
 const btnRight = document.querySelector(".btn-carrusel.right");
+const card = document.querySelector(".slide"); // una sola card
 
 btnRight.addEventListener("click", () => {
-  slidesContainer.scrollBy({ left: 1210, behavior: "smooth" });
+  const scrollAmount = card.offsetWidth + 20; // ancho de la card + margen (ajusta el 20)
+  slidesContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
 });
 
 btnLeft.addEventListener("click", () => {
-  slidesContainer.scrollBy({ left: -1210, behavior: "smooth" });
+  const scrollAmount = card.offsetWidth + 20;
+  slidesContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
 });
-
 // ------------------------------------------------------ ENVIO FORMULARIO --------------------------------------- -- //
 document.querySelector(".formulario_contacto").addEventListener("submit", function(e) {
   e.preventDefault();
@@ -96,24 +98,24 @@ document.querySelector(".formulario_contacto").addEventListener("submit", functi
 // ------------------------------------------------------ NAV BAR, HACER SCROL --------------------------------------- -- //
 
 // selecciona todos los enlaces <a> cuyo atributo href comience con "#" 
-// (es decir, los que apuntan a una sección dentro de la misma página)
+// (es decir los que apuntan a una sección dentro de la misma página)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   
   // A cada enlace encontrado, se le agrega un "escuchador" de eventos (event listener)
-  // que se ejecuta cuando el usuario hace clic en el.
+  // que se ejecuta cuando el usuario hace clic en el
   anchor.addEventListener('click', function(e) {
     
     // Previene el comportamiento por defecto del navegador,
-    // que sería saltar directamente al elemento sin animación.
+    // que sería saltar directamente al elemento sin animacion.
     e.preventDefault();
 
     // Obtiene el elemento de destino en el DOM a partir del valor del href.
-    // Ejemplo: si el enlace es <a href="#contacto">, busca el elemento con id="contacto".
+    // Ejemplo: si el enlace es <a href="#contacto">, busca el elemento con id="contacto"
     const destino = document.querySelector(this.getAttribute('href'));
     
-    // realiza el desplazamiento suave hacia el elemento destino.
-    // - behavior: 'smooth' → activa el scroll animado
-    // - block: 'start' → alinea el inicio (top) de la sección con la parte superior de la ventana
+    // realiza el desplazamiento suave hacia el elemento destino
+    // - behavior: 'smooth' - activa el scroll animado
+    // - block: 'start' - alinea el inicio (top) de la sección con la parte superior de la ventana
     destino.scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -138,7 +140,7 @@ function mostrarAnimacion() {
 window.addEventListener('scroll', mostrarAnimacion);
 mostrarAnimacion();
 
-// ------------------------------------------------------ FORMULARIO --------------------------------------- -- //
+// ------------------------------------------------------ FORMULARIO PRUEBA--------------------------------------- -- //
 
 function guardarFormulario(event) {
   event.preventDefault(); // evita recargar la página
@@ -151,7 +153,7 @@ function guardarFormulario(event) {
     mensaje: document.getElementById('mensaje').value
   };
 
-  // Guardamos los datos en un archivo temporal local (JSON)
+  // Guardar datos en un archivo temporal local (JSON)
   fetch('http://localhost:8000/guardar', {
     method: 'POST',
     headers: {
