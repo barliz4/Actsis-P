@@ -778,8 +778,8 @@ h2.subtitulos_generales {
   display: flex;
   gap: 20px;
   overflow: hidden;
-  
-   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 .slide {
