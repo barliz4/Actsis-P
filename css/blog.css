@@ -268,8 +268,8 @@ nav ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: floatIn 0.8s ease forwards;
   opacity: 0; 
-  
 }
+
 
 .blog-card:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
