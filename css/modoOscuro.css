@@ -1,0 +1,38 @@
+/*VARIABLES DE COLOR Y TIPOGRAFÍA */
+:root {
+  --color-principal: #006980;
+  --color-blanco: #ffffff;
+  --color-hover: #00d5ff;
+  --color-fondo: #000000;
+  --fondo-seccion: #afafaf;
+  --borde-radio: 10px;
+  --fuente-subtitulos: "Barlow", Helvetica, Arial, sans-serif;
+  --fuente-general: 'Montserrat', sans-serif;
+  --fuente-alternativa: cambria, cochin, georgia, times, 'times new roman', serif;
+}
+
+body.modo-oscuro {
+  background-color: var(--color-fondo);
+}
+
+
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-principal);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.boton-flotante:hover {
+  transform: scale(1.2);
+}
