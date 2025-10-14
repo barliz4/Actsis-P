@@ -213,7 +213,7 @@ nav ul {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #006980;
+  background-color: var(--color-principal);
   color: white;
   text-decoration: none;
   padding: 10px 18px;
