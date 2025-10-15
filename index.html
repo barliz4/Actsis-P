@@ -107,13 +107,15 @@
             </div>
 
             <!-- Botón -->
-            <button class="boton_inicio" onclick="window.location.href='html/conoce.html'"> Conocer más sobre ACTSIS →</button>
+            <button class="boton_inicio" onclick="window.location.href='html/conoce.html'"> Conocer más sobre ACTSIS
+              →</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!--Sección Proyectos-->
+
+
     <section id="proyectos">
       <div class="contenedor_proyectos">
         <h2 class="subtitulos_generales">Proyectos Realizados</h2>
@@ -122,53 +124,75 @@
         </p>
 
         <div class="cartas-contenedores">
-          <!-- Carta 1 -->
           <div class="carta animar">
             <div class="carta-imagen">
               <img src="imagenes/imagen_2.png" alt="Proyecto 1" />
             </div>
             <p class="parrafos">Actualización de sistemas críticos.</p>
             <p class="descripcion-carta">
-              Modernizamos sistemas empresariales de alto impacto,
-              garantizando seguridad, continuidad y escalabilidad.
+              Modernizamos sistemas empresariales de alto impacto, garantizando seguridad, continuidad y escalabilidad.
             </p>
-            <button class="boton-proyecto">
-              Ver Proyecto <span>➜</span>
+            <button class="boton-proyecto btn-desplegar" data-target="#proyecto-1">
+              Ver Detalles <span>➜</span>
             </button>
+            <div class="proyecto-detalles" id="proyecto-1">
+              <h4>Actualizaciones</h4>
+              <p>En los proyectos realizamos la modernización integral de sistemas empresariales que soportaban
+                operaciones críticas dentro de la organización. Los objetivos fueron migrar infraestructuras obsoletas
+                hacia entornos más seguros, escalables y eficientes, sin afectar la continuidad del servicio.
+                Se implementan soluciones basadas en tecnologías actualizadas, optimizando el rendimiento y la
+                disponibilidad de los sistemas.</p>
+            </div>
           </div>
 
-          <!-- Carta 2 -->
           <div class="carta animar">
             <div class="carta-imagen">
               <img src="imagenes/imagen_4.png" alt="Proyecto 2" />
             </div>
             <p class="parrafos">Desarrollo de soluciones a medida.</p>
             <p class="descripcion-carta">
-              Creamos aplicaciones personalizadas que optimizan procesos
-              internos y mejoran la experiencia de usuario.
+              Creamos aplicaciones personalizadas que optimizan procesos internos y mejoran la experiencia de usuario.
             </p>
-            <button class="boton-proyecto">
-              Ver Proyecto <span>➜</span>
+            <button class="boton-proyecto btn-desplegar" data-target="#proyecto-2">
+              Ver Detalles <span>➜</span>
             </button>
+            <div class="proyecto-detalles" id="proyecto-2">
+              <h4> Soluciones a medida </h4>
+              <p> En los proyecto se centra en el diseño y desarrollo de soluciones tecnológicas adaptadas a las
+                necesidades específicas de cada cliente. A través de un proceso de análisis detallado, identificamos los
+                puntos críticos de los flujos internos y diseñamos aplicaciones que mejoran la eficiencia operativa y la
+                toma de decisiones. Las soluciones desarrolladas integran funcionalidades intuitivas, interfaces
+                centradas en el usuario y una arquitectura flexible que permite su crecimiento y mantenimiento a largo
+                plazo. </p>
+            </div>
           </div>
 
-          <!-- Carta 3 -->
           <div class="carta animar">
             <div class="carta-imagen">
               <img src="imagenes/imagen_3.png" alt="Proyecto 3" />
             </div>
             <p class="parrafos">Integración y soporte técnico.</p>
             <p class="descripcion-carta">
-              Integramos plataformas tecnológicas y ofrecemos soporte continuo
-              para maximizar la eficiencia.
+              Integramos plataformas tecnológicas y ofrecemos soporte continuo para maximizar la eficiencia.
             </p>
-            <button class="boton-proyecto">
-              Ver Proyecto <span>➜</span>
+            <button class="boton-proyecto btn-desplegar" data-target="#proyecto-3">
+              Ver Detalles <span>➜</span>
             </button>
+            <div class="proyecto-detalles" id="proyecto-3">
+              <h4>Integración y soporte</h4>
+              <p> En los desarrollos de integración y soporte técnico se busca conectar distintas herramientas
+                tecnológicas para lograr un ecosistema digital más eficiente. Este trabajo
+                implica analizar la infraestructura existente, identificar puntos de mejora y establecer flujos de
+                comunicación entre sistemas que antes operaban de forma independiente. Además, se brinda acompañamiento
+                mediante servicios de soporte preventivo y correctivo, garantizando disponibilidad y el
+                rendimiento óptimo de los entornos. </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+
 
     <br />
 
@@ -256,8 +280,8 @@
           </a>
         </div>
         <div class="filial">
-          <a href="" target="_blank" rel="noopener noreferrer"><img
-              src="imagenes/Internet-Prueba-removebg-preview.png" alt="Empesa de Internet" /></a>
+          <a href="" target="_blank" rel="noopener noreferrer"><img src="imagenes/Internet-Prueba-removebg-preview.png"
+              alt="Empesa de Internet" /></a>
         </div>
         <div class="filial">
           <a href="" target="_blank" rel="noopener noreferrer">
@@ -279,7 +303,7 @@
             <img src="imagenes/Energia-Prueba-removebg-preview.png" alt="Empesa de energia" />
           </a>
         </div>
-      </div>  
+      </div>
     </section>
 
     <br />
@@ -290,7 +314,7 @@
       <h2 class="subtitulos_formulario">CONTACTO</h2>
 
       <form class="formulario_contacto" onsubmit="guardarFormulario(event)">
-        <div class="campo"> 
+        <div class="campo">
           <label for="nombre">Nombre:</label>
           <input type="text" id="nombre" name="nombre" required />
         </div>
@@ -321,64 +345,66 @@
     </section>
     <br /><br />
 
-    <button id="modo-btn" class="boton-flotante">
+    <!--<button id="modo-btn" class="boton-flotante">
       <img id="icono-modo" src="imagenes/moon2-removebg-preview.png" alt="Modo oscuro" width="30">
     </button>
-  </header>
+  </header> -->
 
-  <!----- FOOTERS ----->
+    <!----- FOOTERS ----->
 
-  <footer class="footer">
-    <div class="footer-contenido">
-      <!-- Columna 1 -->
-      <div class="footer-col">
-        <h2><span class="resaltado"></span></h2>
-        <img src="imagenes/actsis_black-removebg-preview.png" alt="Logo de Actsis" class="logo-footer" />
-      </div>
+    <footer class="footer">
+      <div class="footer-contenido">
+        <!-- Columna 1 -->
+        <div class="footer-col">
+          <h2><span class="resaltado"></span></h2>
+          <img src="imagenes/actsis_black-removebg-preview.png" alt="Logo de Actsis" class="logo-footer" />
+        </div>
 
-      <!-- Columna 2 -->
-      <div class="footer-col">
-        <h3>Nosotros</h3>
-        <p><a href="html/conoce.html">Acerca De Nosotros</a></p>
-        <p><a href="html/trabaja.html">Trabaja con nosotros</a></p>
-        <p><a href="html/blog.html">Nuestro Blog</a></p>
-        <p><a href="html/terminos.html">Términos Y Condiciones</a></p>
-      </div>
+        <!-- Columna 2 -->
+        <div class="footer-col">
+          <h3>Nosotros</h3>
+          <p><a href="html/conoce.html">Acerca De Nosotros</a></p>
+          <p><a href="html/trabaja.html">Trabaja con nosotros</a></p>
+          <p><a href="html/blog.html">Nuestro Blog</a></p>
+          <p><a href="html/terminos.html">Términos Y Condiciones</a></p>
+        </div>
 
-      <!-- Columna 3 -->
-      <div class="footer-col">
-        <h3>Servicios</h3>
-        <p><a href="#servicios">Desarrollo a medida</a></p>
-        <p><a href="html/gestoria.html">Soporte técnico</a></p>
-        <p><a href="#servicios">Infraestructura TI</a></p>
-        <p><a href="#servicios">Soporte</a></p>
-      </div>
+        <!-- Columna 3 -->
+        <div class="footer-col">
+          <h3>Servicios</h3>
+          <p><a href="#servicios">Desarrollo a medida</a></p>
+          <p><a href="html/gestoria.html">Soporte técnico</a></p>
+          <p><a href="#servicios">Infraestructura TI</a></p>
+          <p><a href="#servicios">Soporte</a></p>
+        </div>
 
-      <!-- Columna 4 -->
-      <div class="footer-col">
-        <h3>Contáctanos</h3>
-        <p><a href="https://www.google.com/maps/place/ACTSIS+LTDA/@7.1213529,-73.1084071,3a,90y,241.01h,73.08t/data=!3m8!1e1!3m6!1s5AAKXUqwJHd8BfY9Fg2K3A!2e0!5s20220201T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D16.91584862241072%26panoid%3D5AAKXUqwJHd8BfY9Fg2K3A%26yaw%3D241.01377060899276!7i16384!8i8192!4m14!1m7!3m6!1s0x8e68155f9e4eb54b:0xf7c0465a7754f82c!2sACTSIS+LTDA!8m2!3d7.1212781!4d-73.1085111!16s%2Fg%2F1tfff7cf!3m5!1s0x8e68155f9e4eb54b:0xf7c0465a7754f82c!8m2!3d7.1212781!4d-73.1085111!16s%2Fg%2F1tfff7cf?entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D">📍Cra. 38 #42-38, Bucaramanga.</a></p>
-        <p><a>✉️ informacion@actsis.com</a></p>
-        <p><a href="html/disponible.html">📸 @actsis.ltda</a></p>
-        <p><a href="html/disponible.html">📞 (+57) 320 456 7890  </a></p>
+        <!-- Columna 4 -->
+        <div class="footer-col">
+          <h3>Contáctanos</h3>
+          <p><a
+              href="https://www.google.com/maps/place/ACTSIS+LTDA/@7.1213529,-73.1084071,3a,90y,241.01h,73.08t/data=!3m8!1e1!3m6!1s5AAKXUqwJHd8BfY9Fg2K3A!2e0!5s20220201T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D16.91584862241072%26panoid%3D5AAKXUqwJHd8BfY9Fg2K3A%26yaw%3D241.01377060899276!7i16384!8i8192!4m14!1m7!3m6!1s0x8e68155f9e4eb54b:0xf7c0465a7754f82c!2sACTSIS+LTDA!8m2!3d7.1212781!4d-73.1085111!16s%2Fg%2F1tfff7cf!3m5!1s0x8e68155f9e4eb54b:0xf7c0465a7754f82c!8m2!3d7.1212781!4d-73.1085111!16s%2Fg%2F1tfff7cf?entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D">📍Cra.
+              38 #42-38, Bucaramanga.</a></p>
+          <p><a>✉️ informacion@actsis.com</a></p>
+          <p><a href="html/disponible.html">📸 @actsis.ltda</a></p>
+          <p><a href="html/disponible.html">📞 (+57) 320 456 7890 </a></p>
 
-        <!--<div class="social-icons">
+          <!--<div class="social-icons">
           <a href="#">🌐</a>
           <a href="#">📘</a>
           <a href="#">🐦</a>
           <a href="#">📸</a>
         </div>-->
+        </div>
       </div>
-    </div>
 
-    <!-- Línea inferior -->
-    <div class="footer-bottom">
-      <p>&copy; 2025 ACTSIS LTDA. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+      <!-- Línea inferior -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 ACTSIS LTDA. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
-  <script src="js/animations.js"></script>
-  <script src="js/modoOscuro.js" defer></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modoOscuro.js" defer></script>
 
 </body>
 
