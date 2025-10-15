@@ -15,6 +15,14 @@ body.modo-oscuro {
   background-color: var(--color-fondo);
 }
 
+/* FORZAR CAMBIO DE COLOR EN ELEMENTOS ESPECÍFICOS */
+
+body.modo-oscuro p,
+body.modo-oscuro li,
+body.modo-oscuro a {
+  color: var(--color-blanco);
+}
+
 
 .boton-flotante {
   position: fixed;

@@ -577,6 +577,30 @@ h2.subtitulos_generales {
   transition: all 0.3s ease;
 }
 
+/* Estilos para el panel de detalles desplegable */
+.proyecto-detalles {
+  /* Oculto por defecto y preparado para la animación */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  padding: 0 15px; /* Evita que el contenido se vea al estar cerrado */
+  font-family: var(--fuente-subtitulos);
+}
+
+/* Estilo que se aplica con JS para mostrar el panel */
+.proyecto-detalles.visible {
+  max-height: 500px; /* Un valor lo suficientemente grande para el contenido */
+  transition: max-height 0.5s ease-in, padding 0.5s ease-in;
+  padding: 20px 15px; /* Se recupera el padding al abrirse */
+  border-top: 1px solid #e0e0e0; /* Línea separadora opcional */
+  margin-top: 15px;
+  justify-items: center;
+  text-align: justify;
+  font-family: var(--fuente-subtitulos);
+  font-size: 15px;
+}
+
+
 .boton-proyecto:hover {
   background-color: var(--color-hover);
   transform: scale(1.05);
