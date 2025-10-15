@@ -53,7 +53,40 @@ document.querySelectorAll(".contador").forEach(counter => {
   }
 });
 
+// ------------------------------------------------------ PROYECTOS REALIZADOS --------------------------------------- -- //
 
+// Espera a que todo el contenido de la página esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+
+  // 1. Selecciona todos los botones que tienen la clase 'btn-desplegar'
+  const botones = document.querySelectorAll('.btn-desplegar');
+
+  // 2. Recorre cada botón para agregarle una funcionalidad
+  botones.forEach(function(boton) {
+    
+    // 3. Agrega un "escuchador" de eventos para el clic
+    boton.addEventListener('click', function(event) {
+      // Previene el comportamiento por defecto del enlace (que es recargar la página)
+      event.preventDefault();
+
+      // 4. Obtiene el objetivo (el ID del panel) del atributo 'data-target'
+      const targetId = this.getAttribute('data-target');
+      const panel = document.querySelector(targetId);
+
+      // 5. Si el panel existe, alterna la clase 'visible'
+      if (panel) {
+        panel.classList.toggle('visible');
+
+        // (Opcional) Cambia el texto del botón
+        if (panel.classList.contains('visible')) {
+          this.textContent = 'Ocultar Detalles ←';
+        } else {
+          this.textContent = 'Ver Proyecto →';
+        }
+      }
+    });
+  });
+});
 
 // ------------------------------------------------------ CARRUSEL, SERVICIOS --------------------------------------- -- //
 const slidesContainer = document.querySelector(".slides_container");
