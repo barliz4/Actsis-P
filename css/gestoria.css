@@ -379,7 +379,7 @@ header h1 {
   margin: auto;
 }
 
-/* Laptops grandes */
+/* pantallas grandes */
 @media (max-width: 1200px) {
   .footer {
     justify-content: center;
