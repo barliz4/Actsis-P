@@ -251,28 +251,65 @@ nav ul {
 
 /* Contenedor Cards */
 .blog-contenedor {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  align-items: stretch;
-  
+  align-items: stretch; /*todas las tarjetas tengan la misma altura */
 }
 
-/* Card */
+.blog-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .blog-card {
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: floatIn 0.8s ease forwards;
-  opacity: 0; 
+  width: 300px;
+  height: 620px;
+  perspective: 1000px;
+  position: relative;
+  background-color: black;
 }
 
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.blog-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  color: var(--color-blanco);
+  background-color: rgba(3, 14, 47, 0.473) ;
+}
 
 .blog-card:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgb(0, 0, 0);
 }
 
 /* ====== Retraso progresivo para cada card ====== */
@@ -313,6 +350,13 @@ nav ul {
   flex: 1;
   display: flex;  
   flex-direction: column;
+  justify-content: space-between; 
+  flex-grow: 1;
+}
+
+.blog-content .descripcion {
+  flex-grow: 1; /* el texto ocupe el espacio disponible */
+  margin-bottom: 16px;
 }
 
 .categoria {
@@ -330,8 +374,14 @@ nav ul {
   text-align: center;
   font-size: 1.3rem;
   margin-bottom: 5px;
-  color:    var(--color-texto);
   margin-bottom: 15px;
+}
+
+.card-back p {
+  text-align: left;
+  font-size: 1.1rem;
+  font-family: var(--fuente-alternativa);
+  margin-top: 19px;
 }
 
 .meta {
@@ -360,6 +410,7 @@ nav ul {
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
   align-self: center;
+   margin-top: auto;
   }
 
 
@@ -368,10 +419,11 @@ nav ul {
 }
 
 /*================ RESPONSIVE BLOG ================ */
+
 @media (max-width: 1400px) {
   .blog-section {
     padding: 40px 15px;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .blog-contenedor {
@@ -385,13 +437,19 @@ nav ul {
     font-size: 3rem;
   }
 
-  .blog-card img {
-    height: 180px;
+  .flip-card {
+    width: 100%;
+    max-width: 400px;
+    height: 480px;
   }
-}
 
-.blog-content {
-    padding: 38px;
+  .flip-card-front img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .blog-content {
+    padding: 30px;
   }
 
   .blog-content h3 {
@@ -402,6 +460,7 @@ nav ul {
     font-size: 0.9rem;
     line-height: 1.5;
   }
+}
 
 @media (max-width: 1200px) {
   .blog-section {
@@ -412,8 +471,13 @@ nav ul {
     font-size: 1.8rem;
   }
 
-  .blog-card img {
-    height: 180px;
+  .flip-card {
+    max-width: 350px;
+    height: 460px;
+  }
+
+  .flip-card-front img {
+    height: 170px;
   }
 }
 
@@ -426,15 +490,19 @@ nav ul {
     font-size: 1.8rem;
   }
 
-  .blog-card img {
-    height: 180px;
+  .flip-card {
+    max-width: 330px;
+    height: 440px;
+  }
+
+  .flip-card-front img {
+    height: 160px;
   }
 }
 
-
 @media (max-width: 768px) {
   .blog-section {
-    padding: 40px 15px;
+    padding: 30px 10px;
   }
 
   .blog-section h2 {
@@ -442,27 +510,61 @@ nav ul {
     text-align: center;
   }
 
-  .blog-card img {
-    height: 180px;
+  .blog-contenedor {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .flip-card {
+    max-width: 320px;
+    height: 420px;
+  }
+
+  .flip-card-front img {
+    height: 150px;
+  }
+
+  .blog-content {
+    padding: 25px;
+  }
+
+  .blog-content h3 {
+    font-size: 1rem;
+  }
+
+  .descripcion {
+    font-size: 0.85rem;
   }
 }
 
-
 @media (max-width: 480px) {
   .blog-section {
-    padding: 40px 15px;
+    padding: 30px 10px;
   }
 
   .blog-section h2 {
     font-size: 1.6rem;
   }
 
-  .blog-card img {
+  .flip-card {
+    max-width: 100%;
+    height: 400px;
+  }
+
+  .flip-card-front img {
     height: 120px;
   }
 
-  .blog-card {
-    padding:20px;
+  .blog-content {
+    padding: 20px;
+  }
+
+  .blog-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .descripcion {
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 }
 
