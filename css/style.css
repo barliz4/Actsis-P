@@ -1225,7 +1225,7 @@ h2.subtitulos_generales {
 .subtitulos_formulario {
   margin: 2px;
   text-align: center;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 900;
   font-family: var(--fuente-subtitulos);
   color: var(--color-blanco);
