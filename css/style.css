@@ -777,7 +777,7 @@ h2.subtitulos_generales {
 ========================================================= */
 
 #servicios {
-  background-color: #000000df;  /*Color temporal*/
+  background-color: var(--color-blanco);  
   padding: 50px 0;
 }
 
@@ -787,7 +787,7 @@ h2.subtitulos_generales {
   margin: auto;
   text-align: center;
   font-family: var(--fuente-general);
-  color: var(--color-blanco);
+  color: var(--color-texto);
 }
 
 /* Carrusel */
