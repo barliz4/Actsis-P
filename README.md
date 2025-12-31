@@ -1,7 +1,7 @@
 # 🌐 Página Web Corporativa - ACTSIS LTDA
      
 Este proyecto corresponde al desarrollo de la página web oficial de **ACTSIS LTDA**, una empresa especializada en soluciones tecnológicas y servicios de consultoría informática.  
-La página busca transmitir **profesionalismo, claridad y accesibilidad** para sus clientes actuales y potenciales.
+La página busca transmitir **profesionalismo, claridad y accesibilidad** para sus clientes actuales y potenciales. 
 
 🚧 **Estado: Finalizado**
 
