@@ -6,7 +6,7 @@ La página busca transmitir **profesionalismo, claridad y accesibilidad** para s
 🚧 **Estado: Finalizado**
 
 🔗 **Ver Demo en Vivo:** [Actsis Web](https://barliz4.github.io/Actsis-P/) 
-
+ 
 ---
 
 ## 🌐 Objetivo del Proyecto
